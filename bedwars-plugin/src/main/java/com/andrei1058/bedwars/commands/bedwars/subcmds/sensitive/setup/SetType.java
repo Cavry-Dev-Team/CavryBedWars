@@ -55,7 +55,7 @@ public class SetType extends SubCommand {
         Player p = (Player) s;
         SetupSession ss = SetupSession.getSession(p.getUniqueId());
         if (ss == null) {
-            s.sendMessage("§c ▪ §7You're not in a setup session!");
+            s.sendMessage("§cYou're not in a setup session!");
             return true;
         }
         if (args.length == 0) {
@@ -81,7 +81,7 @@ public class SetType extends SubCommand {
                 ss.getConfig().set("maxInTeam", 4);
             }
             ss.getConfig().set("group", input);
-            p.sendMessage("§6 ▪ §7Arena group changed to: §d" + input);
+            p.sendMessage("§aArena group changed to §e" + input);
             if (ss.getSetupType() == SetupType.ASSISTED) {
                 Bukkit.dispatchCommand(p, getParent().getName());
             }
@@ -101,10 +101,10 @@ public class SetType extends SubCommand {
     }
 
     private void sendUsage(Player p) {
-        p.sendMessage("§9 ▪ §7Usage: " + getParent().getName() + " " + getSubCommandName() + " <type>");
-        p.sendMessage("§9Available types: ");
+        p.sendMessage("§cUsage: " + getParent().getName() + " " + getSubCommandName() + " <type>");
+        p.sendMessage("§dAvailable types: ");
         for (String st : available) {
-            p.spigot().sendMessage(Misc.msgHoverClick("§1 ▪ §e" + st + " §7(click to set)", "§dClick to make the arena " + st, "/" + getParent().getName() + " " + getSubCommandName() + " " + st, ClickEvent.Action.RUN_COMMAND));
+            p.spigot().sendMessage(Misc.msgHoverClick("§8- §e" + st + " §7(Click to set)", "§eClick to make the arena " + st, "/" + getParent().getName() + " " + getSubCommandName() + " " + st, ClickEvent.Action.RUN_COMMAND));
         }
     }
 
