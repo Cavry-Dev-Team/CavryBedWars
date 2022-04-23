@@ -79,7 +79,8 @@ public class Indonesia extends Language {
         yml.addDefault(Messages.REJOIN_ALLOWED, "{prefix}&eMemasuki arena &a{arena}&e!");
         yml.addDefault(Messages.COMMAND_REJOIN_PLAYER_RECONNECTED, "{prefix}&7{player} &etelah terhubung kembali!");
         yml.addDefault(Messages.COMMAND_LEAVE_DENIED_NOT_IN_ARENA, "{prefix}&cKamu sedang tidak di arena!");
-        yml.addDefault(Messages.COMMAND_LEAVE_MSG, "{prefix}&7{player} &etelah keluar!");
+        yml.addDefault(Messages.COMMAND_LEAVE_MSG, "{vPrefix}{player} &etelah keluar!");
+        yml.addDefault(Messages.COMMAND_INGAME_LEAVE_MSG, "{vPrefix}{player} &etelah terputus!");
         yml.addDefault(Messages.COMMAND_NOT_ALLOWED_IN_GAME, "{prefix}&cAnda tidak dapat melakukan ini selama pertandingan.");
         yml.addDefault(Messages.COMMAND_NOT_FOUND_OR_INSUFF_PERMS, "{prefix}&cPerintah tidak ditemukan atau Anda tidak memiliki izin!");
         yml.addDefault(Messages.COMMAND_PARTY_HELP, Arrays.asList("&6▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬",

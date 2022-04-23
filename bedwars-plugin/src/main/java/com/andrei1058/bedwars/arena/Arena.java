@@ -871,14 +871,26 @@ public class Arena implements IArena {
             }
         }
         for (Player on : getPlayers()) {
-            on.sendMessage(
+            if (status == GameState.playing) {
+                on.sendMessage(
+                    getMsg(on, Messages.COMMAND_INGAME_LEAVE_MSG)
+                            .replace("{vPrefix}", getChatSupport().getPrefix(p))
+                            .replace("{vSuffix}", getChatSupport().getSuffix(p))
+                            .replace("{playername}", p.getName())
+                            .replace("{player}", p.getDisplayName()
+                            )
+                );
+            } else {
+                on.sendMessage(
                     getMsg(on, Messages.COMMAND_LEAVE_MSG)
                             .replace("{vPrefix}", getChatSupport().getPrefix(p))
                             .replace("{vSuffix}", getChatSupport().getSuffix(p))
                             .replace("{playername}", p.getName())
                             .replace("{player}", p.getDisplayName()
                             )
-            );
+                );
+            }
+            
         }
         for (Player on : getSpectators()) {
             on.sendMessage(getMsg(on, Messages.COMMAND_LEAVE_MSG).replace("{vPrefix}", getChatSupport().getPrefix(p)).replace("{playername}", p.getName()).replace("{player}", p.getDisplayName()));
