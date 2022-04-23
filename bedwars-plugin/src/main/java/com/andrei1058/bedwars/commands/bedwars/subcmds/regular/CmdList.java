@@ -51,7 +51,7 @@ public class CmdList extends SubCommand {
         super(parent, name);
         setPriority(11);
         showInList(true);
-        setDisplayInfo(Misc.msgHoverClick("§6 ▪ §7/" + com.andrei1058.bedwars.commands.bedwars.MainCommand.getInstance().getName() + " " + getSubCommandName() + "         §8 - §e view player cmds", "§fView player commands.", "/" + getParent().getName() + " " + getSubCommandName(), ClickEvent.Action.RUN_COMMAND));
+        setDisplayInfo(Misc.msgHoverClick("§8- §e/" + com.andrei1058.bedwars.commands.bedwars.MainCommand.getInstance().getName() + " " + getSubCommandName() + "         §8 - §e view player cmds", "§eView player commands.", "/" + getParent().getName() + " " + getSubCommandName(), ClickEvent.Action.RUN_COMMAND));
     }
 
     @Override
@@ -165,7 +165,7 @@ public class CmdList extends SubCommand {
             p.spigot().sendMessage(Misc.msgHoverClick(ss.dot() + "removeGenerator", genHover, "/" + getParent().getName() + " removeGenerator", ss.getSetupType() == SetupType.ASSISTED ? ClickEvent.Action.RUN_COMMAND : ClickEvent.Action.SUGGEST_COMMAND));
 
             if (ss.getSetupType() == SetupType.ADVANCED) {
-                p.spigot().sendMessage(Misc.msgHoverClick(ss.dot() + "setMaxInTeam <int> (IS SET TO " + maxInTeam + ")", ChatColor.WHITE + "Set the max team size.", "/" + mainCmd + " setMaxInTeam ", ClickEvent.Action.SUGGEST_COMMAND));
+                p.spigot().sendMessage(Misc.msgHoverClick(ss.dot() + "setMaxInTeam <value> (IS SET TO " + maxInTeam + ")", ChatColor.WHITE + "Set the max team size.", "/" + mainCmd + " setMaxInTeam ", ClickEvent.Action.SUGGEST_COMMAND));
                 p.spigot().sendMessage(Misc.msgHoverClick(ss.dot() + "arenaGroup " + group, ChatColor.WHITE + "Set the arena group.", "/" + mainCmd + " arenaGroup ", ClickEvent.Action.SUGGEST_COMMAND));
             } else {
                 p.spigot().sendMessage(Misc.msgHoverClick(ss.dot() + "setType <type> " + group, ChatColor.WHITE + "Add the arena to a group.", "/" + getParent().getName() + " setType", ClickEvent.Action.RUN_COMMAND));
