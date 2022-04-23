@@ -54,7 +54,7 @@ public class DisableArena extends SubCommand {
         Player p = (Player) s;
         if (!MainCommand.isLobbySet(p)) return true;
         if (args.length != 1) {
-            p.sendMessage("§c▪ §7Usage: §o/" + getParent().getName() + " "+getSubCommandName()+" <mapName>");
+            p.sendMessage("§cUsage: /" + getParent().getName() + " "+getSubCommandName()+" <mapName>");
             return true;
         }
         if (!BedWars.getAPI().getRestoreAdapter().isWorld(args[0])) {
@@ -63,7 +63,7 @@ public class DisableArena extends SubCommand {
         }
         IArena a = Arena.getArenaByName(args[0]);
         if (a == null) {
-            p.sendMessage("§c▪ §7This arena is disabled yet!");
+            p.sendMessage("§cThis arena is disabled yet!");
             return true;
         }
         p.sendMessage("§6 ▪ §7Disabling arena...");
