@@ -87,7 +87,7 @@ public class Level extends SubCommand {
             BedWars.plugin.getServer().getScheduler().runTaskAsynchronously(BedWars.plugin, () -> {
                 BedWars.getRemoteDatabase().setLevelData(pl.getUniqueId(), level, 0, levelName, nextLevelCost);
                 s.sendMessage(ChatColor.GREEN + "Player" + pl.getName() + " level was set to: " + args[2]);
-                s.sendMessage(ChatColor.RED + ChatColor.BOLD + "NOTE: " + ChatColor.RED + "The player may need to rejoin to see it updated.");
+                s.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "NOTE: " + ChatColor.RED + "The player may need to rejoin to see it updated.");
             });
         } else if (args[0].equalsIgnoreCase("givexp")) {
             if (args.length != 3) {
@@ -115,7 +115,7 @@ public class Level extends SubCommand {
                 Object[] data = BedWars.getRemoteDatabase().getLevelData(pl.getUniqueId());
                 BedWars.getRemoteDatabase().setLevelData(pl.getUniqueId(), (Integer) data[0], ((Integer)data[1]) + amount, (String) data[2], (Integer)data[3]);
                 s.sendMessage(ChatColor.GREEN + args[2] + " xp was given to " + pl.getName());
-                s.sendMessage(ChatColor.RED + ChatColor.BOLD + "NOTE: " + ChatColor.RED + "The player may need to rejoin to see it updated.");
+                s.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "NOTE: " + ChatColor.RED + "The player may need to rejoin to see it updated.");
             });
         } else {
             sendSubCommands(s, BedWars.getAPI());
