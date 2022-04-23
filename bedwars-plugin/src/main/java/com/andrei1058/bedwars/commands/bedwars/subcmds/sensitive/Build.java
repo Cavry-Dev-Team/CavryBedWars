@@ -44,7 +44,7 @@ public class Build extends SubCommand {
         setPriority(9);
         showInList(true);
         setPermission(Permissions.PERMISSION_BUILD);
-        setDisplayInfo(Misc.msgHoverClick("§6 ▪ §7/" + getParent().getName() + " "+getSubCommandName()+ "         §8 - §ebuild permission", "§fEnable or disable build session \n§fso you can break or place blocks.",
+        setDisplayInfo(Misc.msgHoverClick("§8- §e/" + getParent().getName() + " "+getSubCommandName()+ "         §8 - §eBuild permission", "§eEnable or disable build session \n§eso you can break or place blocks.",
                 "/" + getParent().getName() + " "+getSubCommandName(), ClickEvent.Action.RUN_COMMAND));
     }
 
@@ -54,10 +54,10 @@ public class Build extends SubCommand {
         Player p = (Player) s;
         if (!MainCommand.isLobbySet(p)) return true;
         if (isBuildSession(p)) {
-            p.sendMessage("§6 ▪ §7You can't place and break blocks anymore!");
+            p.sendMessage("§aToggled off build mode!");
             removeBuildSession(p);
         } else {
-            p.sendMessage("§6 ▪ §7You can place and break blocks now.");
+            p.sendMessage("§aToggled on build mode!");
             addBuildSession(p);
         }
         return true;
