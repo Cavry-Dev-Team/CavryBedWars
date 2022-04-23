@@ -107,7 +107,7 @@ public class BedWars extends JavaPlugin {
 
     private static ServerType serverType = ServerType.MULTIARENA;
     public static boolean debug = true, autoscale = false;
-    public static String mainCmd = "bw", link = "https://www.spigotmc.org/resources/50942/";
+    public static String mainCmd = "bw", link = "https://discord.cavrynet.work";
     public static ConfigManager signs, generators;
     public static MainConfig config;
     public static ShopManager shop;
@@ -339,7 +339,7 @@ public class BedWars extends JavaPlugin {
             case "v1_16_R2":
                 registerEvents(new InvisibilityPotionListener());
                 Bukkit.getScheduler().runTaskLater(this,
-                        () -> System.out.println("\u001B[31m[WARN] BedWars1058 may drop support for this server version in the future.\nSee: https://wiki.andrei1058.dev/docs/BedWars1058/compatibility \u001B[0m"), 40L);
+                        () -> System.out.println("\u001B[31m[WARN] CavryBedWars may drop support for this server version in the future.\nSee: https://wiki.andrei1058.dev/docs/BedWars1058/compatibility \u001B[0m"), 40L);
                 break;
         }
 
