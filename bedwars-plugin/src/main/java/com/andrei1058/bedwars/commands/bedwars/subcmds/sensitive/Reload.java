@@ -43,8 +43,8 @@ public class Reload extends SubCommand {
         setPriority(11);
         showInList(true);
         setPermission(Permissions.PERMISSION_RELOAD);
-        setDisplayInfo(Misc.msgHoverClick("§8- §e/" + getParent().getName() + " "+getSubCommandName()+"       §8 - §bReload the languange(s) messages",
-                "§eReload the languange(s) file.\n§cNot recommended!", "/"+ getParent().getName() + " "+getSubCommandName(), ClickEvent.Action.RUN_COMMAND));
+        setDisplayInfo(Misc.msgHoverClick("§8- §e/" + getParent().getName() + " "+getSubCommandName()+"       §8 - §bReload the language(s) messages",
+                "§eReload the language(s) file.\n§cNot recommended!", "/"+ getParent().getName() + " "+getSubCommandName(), ClickEvent.Action.RUN_COMMAND));
     }
 
     @Override
@@ -54,7 +54,7 @@ public class Reload extends SubCommand {
         if (!MainCommand.isLobbySet(p)) return true;
         for (Language l : Language.getLanguages()){
             l.reload();
-            p.sendMessage("§aLanguange "+l.getLangName()+" has been reloaded!");
+            p.sendMessage("§aLanguage "+l.getLangName()+" has been reloaded!");
         }
         return true;
     }
