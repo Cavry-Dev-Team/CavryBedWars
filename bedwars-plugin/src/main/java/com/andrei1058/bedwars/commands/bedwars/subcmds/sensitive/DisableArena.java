@@ -43,7 +43,7 @@ public class DisableArena extends SubCommand {
         super(parent, name);
         setPriority(6);
         showInList(true);
-        setDisplayInfo(Misc.msgHoverClick("§6 ▪ §7/" + getParent().getName() + " "+getSubCommandName()+" §6<worldName>", "§fDisable an arena.\nThis will remove the players \n§ffrom the arena before disabling.",
+        setDisplayInfo(Misc.msgHoverClick("§8- §e/" + getParent().getName() + " "+getSubCommandName()+" <worldName>", "§eDisable an arena.\n§eThis will remove the players \n§efrom the arena before disabling.",
                 "/" + getParent().getName() + " "+getSubCommandName()+" ", ClickEvent.Action.SUGGEST_COMMAND));
         setPermission(Permissions.PERMISSION_ARENA_DISABLE);
     }
@@ -58,7 +58,7 @@ public class DisableArena extends SubCommand {
             return true;
         }
         if (!BedWars.getAPI().getRestoreAdapter().isWorld(args[0])) {
-            p.sendMessage("§c▪ §7" + args[0] + " doesn't exist!");
+            p.sendMessage("§cMap " + args[0] + " doesn't exist!");
             return true;
         }
         IArena a = Arena.getArenaByName(args[0]);
@@ -66,7 +66,7 @@ public class DisableArena extends SubCommand {
             p.sendMessage("§cThis arena is disabled yet!");
             return true;
         }
-        p.sendMessage("§6 ▪ §7Disabling arena...");
+        p.sendMessage("§aArena has been disabled!");
         a.disable();
         return true;
     }
