@@ -125,8 +125,8 @@ public class MainCommand extends BukkitCommand implements ParentCommand {
                         Bukkit.dispatchCommand(s, getName() + " cmds");
                     } else {
                         s.sendMessage("");
-                        s.sendMessage("§8§l" + dot + " §6" + plugin.getDescription().getName() + " v" + plugin.getDescription().getVersion() + " §7- §c Admin Commands");
-                        s.sendMessage("");
+                        s.sendMessage("§8|-" + "§bCavryBedWars v1.0" + " §8- §c Admin Commands");
+                        s.sendMessage("§8|- " + "§7§oPlugin by andrei1058 modified for Cavry Network");
                         sendSubCommands((Player) s);
                     }
                 } else {
@@ -134,7 +134,7 @@ public class MainCommand extends BukkitCommand implements ParentCommand {
                 }
             } else {
                 if (s instanceof ConsoleCommandSender) {
-                    s.sendMessage("§fNo console commands available atm.");
+                    s.sendMessage("§cNo console commands available atm.");
                     return true;
                 }
                 /* Send player commands */
@@ -229,7 +229,7 @@ public class MainCommand extends BukkitCommand implements ParentCommand {
         if (BedWars.getServerType() == ServerType.BUNGEE) return true;
         if (config.getLobbyWorldName().isEmpty()) {
             if (p != null) {
-                p.sendMessage("§c▪ §7You have to set the lobby location first!");
+                p.sendMessage("§cYou have to set the lobby location first!");
             }
             return false;
         }
