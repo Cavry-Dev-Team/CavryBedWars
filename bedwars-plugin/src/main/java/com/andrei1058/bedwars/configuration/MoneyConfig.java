@@ -17,12 +17,12 @@ public class MoneyConfig extends ConfigManager {
     public static void init() {
         money = new MoneyConfig ();
         money.getYml ().options ().copyDefaults ( true );
-        money.getYml ().addDefault ( "money-rewards.per-minute", 5 );
-        money.getYml ().addDefault ( "money-rewards.per-teammate", 30 );
-        money.getYml ().addDefault ( "money-rewards.game-win", 90 );
-        money.getYml ().addDefault ( "money-rewards.bed-destroyed", 60 );
-        money.getYml ().addDefault ( "money-rewards.final-kill", 40 );
-        money.getYml ().addDefault ( "money-rewards.regular-kill", 10 );
+        money.getYml ().addDefault ( "money-rewards.per-minute", 20 );
+        money.getYml ().addDefault ( "money-rewards.per-teammate", 320 );
+        money.getYml ().addDefault ( "money-rewards.game-win", 1280 );
+        money.getYml ().addDefault ( "money-rewards.bed-destroyed", 640 );
+        money.getYml ().addDefault ( "money-rewards.final-kill", 80 );
+        money.getYml ().addDefault ( "money-rewards.regular-kill", 40 );
         money.save ();
     }
 }
