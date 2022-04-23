@@ -82,7 +82,7 @@ public class SetupSession implements ISetupSession {
      * Gets the setup type gui inv name
      */
     public static String getInvName() {
-        return "§8Choose a setup method";
+        return "§8Setup Methods";
     }
 
     /**
@@ -122,7 +122,7 @@ public class SetupSession implements ISetupSession {
      * @return return is broken. do not use it.
      */
     public boolean startSetup() {
-        getPlayer().sendMessage("§6 ▪ §7Loading " + getWorldName());
+        getPlayer().sendMessage("§aLoading " + getWorldName() + " §amap...");
         cm = new ArenaConfig(BedWars.plugin, getWorldName(), plugin.getDataFolder().getPath() + "/Arenas");
         BedWars.getAPI().getRestoreAdapter().onSetupSessionStart(this);
         return true;
@@ -132,15 +132,15 @@ public class SetupSession implements ISetupSession {
         Inventory inv = Bukkit.createInventory(null, 9, getInvName());
         ItemStack assisted = new ItemStack(Material.GLOWSTONE_DUST);
         ItemMeta am = assisted.getItemMeta();
-        am.setDisplayName("§e§lASSISTED SETUP");
-        am.setLore(Arrays.asList("", "§aEasy and quick setup!", "§7For beginners and lazy staff :D", "", "§3Reduced options."));
+        am.setDisplayName("§a§lEASY SETUP");
+        am.setLore(Arrays.asList("§8Setup Method", "", "§7Choose this setup method if", "§7you are a beginner and want", "&7an easy one to setup!", "", "&eClick to select!"));
         assisted.setItemMeta(am);
         inv.setItem(getAssistedSlot(), assisted);
 
         ItemStack advanced = new ItemStack(Material.REDSTONE);
         ItemMeta amm = advanced.getItemMeta();
-        amm.setDisplayName("§c§lADVANCED SETUP");
-        amm.setLore(Arrays.asList("", "§aDetailed setup!", "§7For experienced staff :D", "", "§3Advanced options."));
+        amm.setDisplayName("§c§lEXTREME SETUP");
+        amm.setLore(Arrays.asList("§8Setup Method", "", "§7Choose this setup method if", "§7you have experience and want", "§7more details to setup!", "", "§eClick to select!"));
         advanced.setItemMeta(amm);
         inv.setItem(getAdvancedSlot(), advanced);
 
@@ -153,7 +153,7 @@ public class SetupSession implements ISetupSession {
     public void cancel() {
         getSetupSessions().remove(this);
         if (isStarted()) {
-            player.sendMessage("§6 ▪ §7" + getWorldName() + " setup cancelled!");
+            player.sendMessage("§cSetup for map " + getWorldName() + " has been cancelled!");
             done();
         }
     }
@@ -222,14 +222,14 @@ public class SetupSession implements ISetupSession {
         for (int x = 0; x < 10; x++) {
             getPlayer().sendMessage(" ");
         }
-        player.sendMessage(ChatColor.GREEN + "You were teleported to the " + ChatColor.GOLD + getWorldName() + ChatColor.GREEN + "'s spawn.");
+        player.sendMessage(ChatColor.GREEN + "You were teleported to the " + getWorldName() + ChatColor.GREEN + "'s map.");
         if (getSetupType() == SetupType.ASSISTED && getConfig().getYml().get("waiting.Loc") == null) {
             player.sendMessage("");
-            player.sendMessage(ChatColor.GREEN + "Hello " + player.getDisplayName() + "!");
-            player.sendMessage(ChatColor.WHITE + "Please set the waiting spawn.");
-            player.sendMessage(ChatColor.WHITE + "It is the place where players will wait the game to start.");
-            player.spigot().sendMessage(Misc.msgHoverClick(ChatColor.BLUE + "     ▪     " + ChatColor.GOLD + "CLICK HERE TO SET THE WAITING LOBBY    " + ChatColor.BLUE + " ▪", ChatColor.LIGHT_PURPLE + "Click to set the waiting spawn.", "/" + BedWars.mainCmd + " setWaitingSpawn", ClickEvent.Action.RUN_COMMAND));
-            player.spigot().sendMessage(MainCommand.createTC(ChatColor.YELLOW + "Or type: " + ChatColor.GRAY + "/" + BedWars.mainCmd + " to see the command list.", "/" + BedWars.mainCmd + "", ChatColor.WHITE + "Show commands list."));
+            player.sendMessage(ChatColor.GREEN + "Hello " + player.getDisplayName() + ", Welcome to the Setup Session!");
+            player.sendMessage(ChatColor.GRAY + "First, you need to set the waiting spawn.");
+            player.sendMessage(ChatColor.GRAY + "It's the place where players will wait the game to start.");
+            player.spigot().sendMessage(Misc.msgHoverClick(ChatColor.BLUE + "           " + ChatColor.LIGHT_PURPLE + "Click here to set the waiting lobby    " + ChatColor.BLUE + "  ", ChatColor.YELLOW + "Click to set the waiting lobby!", "/" + BedWars.mainCmd + " setWaitingSpawn", ClickEvent.Action.RUN_COMMAND));
+            player.spigot().sendMessage(MainCommand.createTC(ChatColor.YELLOW + "Or you can type: " + ChatColor.GRAY + "/" + BedWars.mainCmd + " to see the command list.", "/" + BedWars.mainCmd + "", ChatColor.WHITE + "Show commands list."));
         } else {
             Bukkit.dispatchCommand(player, BedWars.mainCmd + " cmds");
         }
@@ -248,31 +248,31 @@ public class SetupSession implements ISetupSession {
                 for (String gen : new String[]{"Iron", "Gold", "Emerald"}) {
                     if (getConfig().getYml().get("Team." + team + "." + gen) != null) {
                         for (String loc : getConfig().getList("Team." + team + ".Iron")) {
-                            createArmorStand(ChatColor.GOLD + gen + " generator added for team: " + getTeamColor(team) + team, getConfig().convertStringToArenaLocation(loc), loc);
+                            createArmorStand(ChatColor.GREEN + gen + " Generator added for team: " + getTeamColor(team) + team, getConfig().convertStringToArenaLocation(loc), loc);
                         }
                     }
                     if (getConfig().getYml().get("Team." + team + ".Spawn") != null) {
-                        createArmorStand(getTeamColor(team) + team + " " + ChatColor.GOLD + "SPAWN SET", getConfig().getArenaLoc("Team." + team + ".Spawn"), getConfig().getString("Team." + team + ".Spawn"));
+                        createArmorStand(getTeamColor(team) + team + " " + ChatColor.GREEN + "SPAWN SET", getConfig().getArenaLoc("Team." + team + ".Spawn"), getConfig().getString("Team." + team + ".Spawn"));
                     }
                     if (getConfig().getYml().get("Team." + team + ".Bed") != null) {
-                        createArmorStand(getTeamColor(team) + team + " " + ChatColor.GOLD + "BED SET", getConfig().getArenaLoc("Team." + team + ".Bed"), getConfig().getString("Team." + team + ".Bed"));
+                        createArmorStand(getTeamColor(team) + team + " " + ChatColor.GREEN + "BED SET", getConfig().getArenaLoc("Team." + team + ".Bed"), getConfig().getString("Team." + team + ".Bed"));
                     }
                 }
                 if (getConfig().getYml().get("Team." + team + ".Shop") != null) {
-                    createArmorStand(getTeamColor(team) + team + " " + ChatColor.GOLD + "SHOP SET", getConfig().getArenaLoc("Team." + team + ".Shop"), null);
+                    createArmorStand(getTeamColor(team) + team + " " + ChatColor.GREEN + "SHOP SET", getConfig().getArenaLoc("Team." + team + ".Shop"), null);
                 }
                 if (getConfig().getYml().get("Team." + team + ".Upgrade") != null) {
-                    createArmorStand(getTeamColor(team) + team + " " + ChatColor.GOLD + "UPGRADE SET", getConfig().getArenaLoc("Team." + team + ".Upgrade"), null);
+                    createArmorStand(getTeamColor(team) + team + " " + ChatColor.GREEN + "UPGRADE SET", getConfig().getArenaLoc("Team." + team + ".Upgrade"), null);
                 }
                 if (getConfig().getYml().get("Team." + team + "." + ConfigPath.ARENA_TEAM_KILL_DROPS_LOC) != null) {
-                    createArmorStand(ChatColor.GOLD + "Kill drops " + team, getConfig().getArenaLoc("Team." + team + "." + ConfigPath.ARENA_TEAM_KILL_DROPS_LOC), null);
+                    createArmorStand(ChatColor.GREEN + "Kill drops " + team, getConfig().getArenaLoc("Team." + team + "." + ConfigPath.ARENA_TEAM_KILL_DROPS_LOC), null);
                 }
             }
 
             for (String type : new String[]{"Emerald", "Diamond"}) {
                 if (getConfig().getYml().get("generator." + type) != null) {
                     for (String loc : getConfig().getList("generator." + type)) {
-                        createArmorStand(ChatColor.GOLD + type + " SET", getConfig().convertStringToArenaLocation(loc), loc);
+                        createArmorStand(ChatColor.GREEN + type + " SET", getConfig().convertStringToArenaLocation(loc), loc);
                     }
                 }
             }
