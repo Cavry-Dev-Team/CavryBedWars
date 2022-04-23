@@ -52,7 +52,7 @@ public class DelArena extends SubCommand {
         setPriority(4);
         showInList(true);
         setPermission(Permissions.PERMISSION_DEL_ARENA);
-        setDisplayInfo(Misc.msgHoverClick("§6 ▪ §7/" + MainCommand.getInstance().getName() + " "+getSubCommandName()+" §6<worldName>", "§fDelete a map and its configuration.",
+        setDisplayInfo(Misc.msgHoverClick("§8- §e/" + MainCommand.getInstance().getName() + " "+getSubCommandName()+" <mapName>", "§eDelete a map and its configuration.",
                 "/" + MainCommand.getInstance().getName() + " "+getSubCommandName(), ClickEvent.Action.SUGGEST_COMMAND));
     }
 
@@ -62,33 +62,33 @@ public class DelArena extends SubCommand {
         Player p = (Player) s;
         if (!MainCommand.isLobbySet(p)) return true;
         if (args.length != 1) {
-            p.sendMessage("§c▪ §7Usage: §o/" + MainCommand.getInstance().getName() + " delArena <mapName>");
+            p.sendMessage("§cUsage: /" + MainCommand.getInstance().getName() + " delArena <mapName>");
             return true;
         }
         if (!BedWars.getAPI().getRestoreAdapter().isWorld(args[0])) {
-            p.sendMessage("§c▪ §7" + args[0] + " doesn't exist as a world folder!");
+            p.sendMessage("§cMap " + args[0] + " doesn't exist as a world folder!");
             return true;
         }
         if (getArenaByName(args[0]) != null) {
-            p.sendMessage("§c▪ §7Please disable it first!");
+            p.sendMessage("§cPlease disable it first!");
             return true;
         }
         File ac = new File(plugin.getDataFolder(), "/Arenas/" + args[0]+ ".yml");
         if (!ac.exists()) {
-            p.sendMessage("§c▪ §7This arena doesn't exist!");
+            p.sendMessage("§cThis arena doesn't exist!");
             return true;
         }
         if (delArenaConfirm.containsKey(p)) {
             if (System.currentTimeMillis() - 2000 <= delArenaConfirm.get(p)) {
                 BedWars.getAPI().getRestoreAdapter().deleteWorld(args[0]);
                 FileUtils.deleteQuietly(ac);
-                p.sendMessage("§c▪ §7" + args[0] + " was deleted!");
+                p.sendMessage("§cMap " + args[0] + " has been deleted!");
                 return true;
             }
-            p.sendMessage("§6 ▪ §7Type again to confirm.");
+            p.sendMessage("§aPlease type §e/bw delArena " + args[0] + " §ato confirm to delete arena!");
             delArenaConfirm.replace(p, System.currentTimeMillis());
         } else {
-            p.sendMessage("§6 ▪ §7Type again to confirm.");
+            p.sendMessage("§aPlease type §e/bw delArena " + args[0] + " §ato confirm to delete arena!");
             delArenaConfirm.put(p, System.currentTimeMillis());
         }
         return true;
