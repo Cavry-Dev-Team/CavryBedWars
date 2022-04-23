@@ -48,27 +48,27 @@ public class SetMaxInTeam extends SubCommand {
         Player p = (Player) s;
         SetupSession ss = SetupSession.getSession(p.getUniqueId());
         if (ss == null){
-            s.sendMessage("§c ▪ §7You're not in a setup session!");
+            s.sendMessage("§cYou're not in a setup session!");
             return true;
         }
         if (args.length == 0) {
-            p.sendMessage("§c▪ §7Usage: /" + mainCmd + " setMaxInTeam <int>");
+            p.sendMessage("§cUsage: /" + mainCmd + " setMaxInTeam <value>");
         } else {
             try {
                 Integer.parseInt(args[0]);
             } catch (Exception ex) {
-                p.sendMessage("§c▪ §7Usage: /" + mainCmd + " setMaxInTeam <int>");
+                p.sendMessage("§cUsage: /" + mainCmd + " setMaxInTeam <value>");
                 return true;
             }
             ss.getConfig().set("maxInTeam", Integer.valueOf(args[0]));
-            p.sendMessage("§6 ▪ §7Max in team set!");
+            p.sendMessage("§aMax in team set!");
         }
         return true;
     }
 
     @Override
     public List<String> getTabComplete() {
-        return Arrays.asList("1", "2", "4");
+        return Arrays.asList("1", "2", "3", "4");
     }
 
     @Override
