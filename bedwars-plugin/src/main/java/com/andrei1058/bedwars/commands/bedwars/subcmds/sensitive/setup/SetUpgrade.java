@@ -59,7 +59,7 @@ public class SetUpgrade extends SubCommand {
         Player p = (Player) s;
         SetupSession ss = SetupSession.getSession(p.getUniqueId());
         if (ss == null) {
-            s.sendMessage("§c ▪ §7You're not in a setup session!");
+            s.sendMessage("§cYou're not in a setup session!");
             return true;
         }
         if (args.length == 0) {
