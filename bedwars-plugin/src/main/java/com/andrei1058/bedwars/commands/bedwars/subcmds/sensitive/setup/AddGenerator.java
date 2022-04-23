@@ -76,7 +76,7 @@ public class AddGenerator extends SubCommand {
                 }
 
                 // else send usage message
-                p.sendMessage(ss.getPrefix() + ChatColor.RED + "Could not find any nearby team.");
+                p.sendMessage(ss.getPrefix() + ChatColor.RED + "Could not find any nearby team!");
                 p.spigot().sendMessage(Misc.msgHoverClick(ss.getPrefix() + "Make sure you set the team's spawn first!", ChatColor.WHITE + "Set a team spawn.", "/" + getParent().getName() + " " + getSubCommandName() + " ", ClickEvent.Action.SUGGEST_COMMAND));
                 p.spigot().sendMessage(Misc.msgHoverClick(ss.getPrefix() + "Or if you set the spawn and it wasn't found automatically try using: /bw addGenerator <team>", "Add a team generator.", "/" + getParent().getName() + " " + getSubCommandName() + " ", ClickEvent.Action.SUGGEST_COMMAND));
                 p.spigot().sendMessage(Misc.msgHoverClick(ss.getPrefix() + "Other use: /bw addGenerator <emerald/ diamond>", "Add an emerald/ diamond generator.", "/" + getParent().getName() + " " + getSubCommandName() + " ", ClickEvent.Action.SUGGEST_COMMAND));
@@ -183,16 +183,16 @@ public class AddGenerator extends SubCommand {
             return true;
         }
         if (ss.getSetupType() == SetupType.ASSISTED) {
-            p.spigot().sendMessage(Misc.msgHoverClick(ss.getPrefix() + "/bw addGenerator (detect team automatically)", "Add a team generator.", "/" + getParent().getName() + " " + getSubCommandName() + " ", ClickEvent.Action.SUGGEST_COMMAND));
-            p.spigot().sendMessage(Misc.msgHoverClick(ss.getPrefix() + "/bw addGenerator <team>", "Add a team generator.", "/" + getParent().getName() + " " + getSubCommandName() + " ", ClickEvent.Action.SUGGEST_COMMAND));
+            p.spigot().sendMessage(Misc.msgHoverClick(ss.getPrefix() + "/bw addGenerator (detect team automatically)", "§eAdd a team generator.", "/" + getParent().getName() + " " + getSubCommandName() + " ", ClickEvent.Action.SUGGEST_COMMAND));
+            p.spigot().sendMessage(Misc.msgHoverClick(ss.getPrefix() + "/bw addGenerator <team>", "§eAdd a team generator.", "/" + getParent().getName() + " " + getSubCommandName() + " ", ClickEvent.Action.SUGGEST_COMMAND));
 
         }
         if (ss.getSetupType() == SetupType.ADVANCED) {
-            p.spigot().sendMessage(Misc.msgHoverClick(ss.getPrefix() + "/bw addGenerator <iron/ gold/ upgrade>", "Add a team generator.\nThe team will be detected automatically.", "/" + getParent().getName() + " " + getSubCommandName() + " ", ClickEvent.Action.SUGGEST_COMMAND));
+            p.spigot().sendMessage(Misc.msgHoverClick(ss.getPrefix() + "/bw addGenerator <iron/ gold/ upgrade>", "§eAdd a team generator.\n§eThe team will be detected automatically.", "/" + getParent().getName() + " " + getSubCommandName() + " ", ClickEvent.Action.SUGGEST_COMMAND));
 
-            p.spigot().sendMessage(Misc.msgHoverClick(ss.getPrefix() + "/bw addGenerator <iron/ gold/ upgrade> <team>", "Add a team generator.", "/" + getParent().getName() + " " + getSubCommandName() + " ", ClickEvent.Action.SUGGEST_COMMAND));
+            p.spigot().sendMessage(Misc.msgHoverClick(ss.getPrefix() + "/bw addGenerator <iron/ gold/ upgrade> <team>", "§eAdd a team generator.", "/" + getParent().getName() + " " + getSubCommandName() + " ", ClickEvent.Action.SUGGEST_COMMAND));
         }
-        p.spigot().sendMessage(Misc.msgHoverClick(ss.getPrefix() + "/bw addGenerator <emerald/ diamond>", "Add an emerald/ diamond generator.", "/" + getParent().getName() + " " + getSubCommandName() + " ", ClickEvent.Action.SUGGEST_COMMAND));
+        p.spigot().sendMessage(Misc.msgHoverClick(ss.getPrefix() + "/bw addGenerator <emerald/ diamond>", "§eAdd an emerald/ diamond generator.", "/" + getParent().getName() + " " + getSubCommandName() + " ", ClickEvent.Action.SUGGEST_COMMAND));
         return true;
     }
 
