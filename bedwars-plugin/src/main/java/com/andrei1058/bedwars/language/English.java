@@ -279,7 +279,7 @@ public class English extends Language {
         yml.addDefault(Messages.NEXT_EVENT_SUBTITLE_ANNOUNCE_SUDDEN_DEATH, "");
         yml.addDefault(Messages.NEXT_EVENT_CHAT_ANNOUNCE_SUDDEN_DEATH, "&cSUDDEN DEATH: &6+&b{TeamDragons} {TeamColor}{TeamName} Dragon!");
         yml.addDefault(Messages.XP_REWARD_PER_MINUTE, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Play Time)");
-        yml.addDefault(Messages.XP_REWARD_WIN, "{prefix}&6+{xp} Bed Wars Experience Received (Game Win)");
+        yml.addDefault(Messages.XP_REWARD_WIN, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Game Win)");
         yml.addDefault(Messages.XP_REWARD_PER_TEAMMATE, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Team Support)");
         yml.addDefault(Messages.XP_REWARD_BED_DESTROY, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Bed Destroyed)");
         yml.addDefault(Messages.XP_REWARD_REGULAR_KILL, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Regular Kill)");
