@@ -43,7 +43,7 @@ public class SetupArena extends SubCommand {
     public SetupArena(ParentCommand parent, String name) {
         super(parent, name);
         setPriority(2);
-        setDisplayInfo(Misc.msgHoverClick("§6 ▪ §7/" + com.andrei1058.bedwars.commands.bedwars.MainCommand.getInstance().getName() + " setupArena §6<worldName>", "§fCreate or edit an arena.\n'_' and '-' will not be displayed in the arena's name.",
+        setDisplayInfo(Misc.msgHoverClick("§8- §e/" + com.andrei1058.bedwars.commands.bedwars.MainCommand.getInstance().getName() + " setupArena <mapName>", "§eCreate or edit an arena.\n§e'_' and '-' will not be displayed in the arena's name.",
                 "/" + com.andrei1058.bedwars.commands.bedwars.MainCommand.getInstance().getName() + " setupArena ", ClickEvent.Action.SUGGEST_COMMAND));
         showInList(true);
         setPermission(Permissions.PERMISSION_SETUP_ARENA);
@@ -55,15 +55,15 @@ public class SetupArena extends SubCommand {
         Player p = (Player) s;
         if (!MainCommand.isLobbySet(p)) return true;
         if (args.length != 1) {
-            p.sendMessage("§c▪ §7Usage: §o/" + getParent().getName() + " " + getSubCommandName() + " <mapName>");
+            p.sendMessage("§cUsage: /" + getParent().getName() + " " + getSubCommandName() + " <mapName>");
             return true;
         }
         if (!args[0].equals(args[0].toLowerCase())) {
-            p.sendMessage("§c▪ §c" + args[0] + ChatColor.GRAY + " mustn't contain capital letters! Rename your folder to: " + ChatColor.GREEN + args[0].toLowerCase());
+            p.sendMessage("§cMap " + args[0] + ChatColor.RED + " mustn't contain capital letters! Rename the folder to " + ChatColor.GREEN + args[0].toLowerCase());
             return true;
         }
         if (args[0].contains("+")) {
-            p.sendMessage("§c▪ §7" + args[0] + " mustn't contain this symbol: " + ChatColor.RED + "+");
+            p.sendMessage("§cMap " + args[0] + " mustn't contain this symbol: " + ChatColor.RED + "+");
             return true;
         }
         //if (!BedWars.getAPI().getRestoreAdapter().isWorld(args[0])) {
@@ -71,11 +71,11 @@ public class SetupArena extends SubCommand {
         //    return true;
         //}
         if (getArenaByName(args[0]) != null && !BedWars.autoscale) {
-            p.sendMessage("§c▪ §7Please disable it first!");
+            p.sendMessage("§cYou need to disable the arena first!");
             return true;
         }
         if (SetupSession.isInSetupSession(p.getUniqueId())) {
-            p.sendMessage("§c ▪ §7You're already in a setup session!");
+            p.sendMessage("§cYou're already in a setup session!");
             return true;
         }
         new SetupSession(p, args[0]);
