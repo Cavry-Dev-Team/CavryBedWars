@@ -125,7 +125,7 @@ public class MainCommand extends BukkitCommand implements ParentCommand {
                         Bukkit.dispatchCommand(s, getName() + " cmds");
                     } else {
                         s.sendMessage("");
-                        s.sendMessage("§8|- " + "§bCavry BedWars v1.0" + " §8- §c Admin Commands");
+                        s.sendMessage("§8|- " + "§bCavry Bed Wars v1.0" + " §8- §c Admin Commands");
                         s.sendMessage("§8|- " + "§7§oPlugin by andrei1058 modified for Cavry Network");
                         s.sendMessage("");
                         sendSubCommands((Player) s);
