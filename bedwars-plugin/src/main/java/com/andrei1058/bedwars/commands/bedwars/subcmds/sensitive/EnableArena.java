@@ -45,7 +45,7 @@ public class EnableArena extends SubCommand {
 
     public EnableArena(ParentCommand parent, String name) {
         super(parent, name);
-        setDisplayInfo(Misc.msgHoverClick("§6 ▪ §7/" + getParent().getName() + " "+getSubCommandName()+" §6<worldName>","§fEnable an arena.",
+        setDisplayInfo(Misc.msgHoverClick("§8- §e/" + getParent().getName() + " "+getSubCommandName()+" <worldName>","§eEnable an arena.",
                 "/" + getParent().getName() + " "+getSubCommandName()+ " ", ClickEvent.Action.SUGGEST_COMMAND));
         showInList(true);
         setPriority(5);
@@ -58,27 +58,27 @@ public class EnableArena extends SubCommand {
         Player p = (Player) s;
         if (!MainCommand.isLobbySet(p)) return true;
         if (args.length != 1) {
-            p.sendMessage("§c▪ §7Usage: §o/" + getParent().getName() + " enableRotation <mapName>");
+            p.sendMessage("§cUsage: /" + getParent().getName() + " enableRotation <mapName>");
             return true;
         }
         if (!BedWars.getAPI().getRestoreAdapter().isWorld(args[0])) {
-            p.sendMessage("§c▪ §7" + args[0] + " doesn't exist!");
+            p.sendMessage("§cMap " + args[0] + " doesn't exist!");
             return true;
         }
 
         for (IArena mm : Arena.getEnableQueue()){
             if (mm.getArenaName().equalsIgnoreCase(args[0])){
-                p.sendMessage("§c▪ §7This arena is already in the enable queue!");
+                p.sendMessage("§cThis arena is already in the enable queue!");
                 return true;
             }
         }
 
         IArena aa = Arena.getArenaByName(args[0]);
         if (aa != null) {
-            p.sendMessage("§c▪ §7This arena is already enabled!");
+            p.sendMessage("§cThis arena is already enabled!");
             return true;
         }
-        p.sendMessage("§6 ▪ §7Enabling arena...");
+        p.sendMessage("§aArena has been enabled!");
         new Arena(args[0], p);
         return true;
     }
