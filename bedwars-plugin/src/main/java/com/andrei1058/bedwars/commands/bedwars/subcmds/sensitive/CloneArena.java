@@ -92,7 +92,7 @@ public class CloneArena extends SubCommand {
                 p.sendMessage("§cAn error occurred while copying the map's config. Check the console.");
             }
         }
-        p.sendMessage("§6 ▪ §7Done :D.");
+        p.sendMessage("§aArena has been cloned!");
         return true;
     }
 
