@@ -45,7 +45,7 @@ public class Level extends SubCommand {
         setPermission(Permissions.PERMISSION_LEVEL);
         setPriority(10);
         showInList(true);
-        setDisplayInfo(Misc.msgHoverClick("§6 ▪ §7/" + getParent().getName() + " " + getSubCommandName() + " §8      - §eclick for details", "§fManage a player level.",
+        setDisplayInfo(Misc.msgHoverClick("§8- §e/" + getParent().getName() + " " + getSubCommandName() + " §8      - §eClick for details", "§eManage a player level.",
                 "/" + getParent().getName() + " " + getSubCommandName(), ClickEvent.Action.RUN_COMMAND));
     }
 
