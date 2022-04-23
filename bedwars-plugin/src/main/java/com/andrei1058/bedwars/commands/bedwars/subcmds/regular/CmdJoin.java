@@ -44,8 +44,8 @@ public class CmdJoin extends SubCommand {
         super(parent, name);
         setPriority(19);
         showInList(false);
-        setDisplayInfo(com.andrei1058.bedwars.commands.bedwars.MainCommand.createTC("§6 ▪ §7/"+ com.andrei1058.bedwars.commands.bedwars.MainCommand.getInstance().getName()+" join §e<random/ arena/ groupName>",
-                "/"+getParent().getName()+" "+getSubCommandName(), "§fJoin an arena by name or by group.\n§f/bw join random - join random arena."));
+        setDisplayInfo(com.andrei1058.bedwars.commands.bedwars.MainCommand.createTC("§8- §e/"+ com.andrei1058.bedwars.commands.bedwars.MainCommand.getInstance().getName()+" join §e<random/ arena/ groupName>",
+                "/"+getParent().getName()+" "+getSubCommandName(), "§eJoin an arena by name or by group.\n§e/bw join random - join random arena."));
     }
 
     @Override
