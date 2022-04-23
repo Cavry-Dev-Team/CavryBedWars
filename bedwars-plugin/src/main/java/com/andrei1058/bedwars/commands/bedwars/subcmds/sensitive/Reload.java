@@ -43,7 +43,7 @@ public class Reload extends SubCommand {
         setPriority(11);
         showInList(true);
         setPermission(Permissions.PERMISSION_RELOAD);
-        setDisplayInfo(Misc.msgHoverClick("§8- §e/" + getParent().getName() + " "+getSubCommandName()+"       §8 - §ereload messages",
+        setDisplayInfo(Misc.msgHoverClick("§8- §e/" + getParent().getName() + " "+getSubCommandName()+"       §8 - §bReload the languange(s) messages",
                 "§eReload the languange(s) file.\n§cNot recommended!", "/"+ getParent().getName() + " "+getSubCommandName(), ClickEvent.Action.RUN_COMMAND));
     }
 
