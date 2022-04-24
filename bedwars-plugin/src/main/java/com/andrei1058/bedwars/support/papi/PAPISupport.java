@@ -218,8 +218,8 @@ public class PAPISupport extends PlaceholderExpansion {
                 replay = String.valueOf(BedWars.getLevelSupport().getPlayerLevel(player));
                 break;
             case "player_level_nobrackets":
-                String a = BedWars.getLevelSupport().getLevel(player);
-                replay = a.replaceAll("\\p{P}","");
+                String epep = BedWars.getLevelSupport().getLevel(player);
+                replay = epep.replaceAll("\\p{P}","");
                 break;
             case "player_progress":
                 replay = BedWars.getLevelSupport().getProgressBar(player);
