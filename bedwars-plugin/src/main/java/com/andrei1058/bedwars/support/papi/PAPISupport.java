@@ -183,7 +183,7 @@ public class PAPISupport extends PlaceholderExpansion {
                     }
                 }
                 break;
-            case "player_team_letter_colored":
+            case "player_team_letter":
                 if (a != null) {
                     if (a.isPlayer(player)) {
                         if (a.getStatus() == GameState.playing) {
