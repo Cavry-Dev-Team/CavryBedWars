@@ -174,7 +174,8 @@ public class PAPISupport extends PlaceholderExpansion {
                             ITeam bwt = a.getTeam(player);
                             if (bwt != null) {
                                 replay += Language.getMsg(player, Messages.FORMAT_PAPI_PLAYER_TEAM_TEAM).replace("{TeamName}",
-                                        bwt.getDisplayName(Language.getPlayerLanguage(player))).replace("{TeamColor}", String.valueOf(bwt.getColor().chat()));
+                                        bwt.getDisplayName(Language.getPlayerLanguage(player))).replace("{TeamColor}", String.valueOf(bwt.getColor().chat()))
+                                        .replace("{TeamLetter}", team.getName().substring(0,1).toUpperCase());
                             }
                         }
                     } else {
