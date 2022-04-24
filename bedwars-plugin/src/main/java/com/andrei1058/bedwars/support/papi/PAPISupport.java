@@ -203,7 +203,7 @@ public class PAPISupport extends PlaceholderExpansion {
                         if (a.getStatus() == GameState.playing) {
                             ITeam bwt = a.getTeam(player);
                             if (bwt != null) {
-                                replay = String.valueOf(bwt.getColor().chat()) + bwt.getName().substring(0,1).toUpperCase();
+                                replay = bwt.getColor().chat() + bwt.getName().substring(0,1).toUpperCase();
                             }
                         }
                     } else {
@@ -216,6 +216,10 @@ public class PAPISupport extends PlaceholderExpansion {
                 break;
             case "player_level_raw":
                 replay = String.valueOf(BedWars.getLevelSupport().getPlayerLevel(player));
+                break;
+            case "player_level_nobrackets":
+                String a = BedWars.getLevelSupport().getLevel(player);
+                replay = a.replaceAll("\\p{P}","");
                 break;
             case "player_progress":
                 replay = BedWars.getLevelSupport().getProgressBar(player);
