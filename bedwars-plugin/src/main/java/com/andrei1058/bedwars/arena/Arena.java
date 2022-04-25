@@ -893,7 +893,11 @@ public class Arena implements IArena {
             
         }
         for (Player on : getSpectators()) {
-            on.sendMessage(getMsg(on, Messages.COMMAND_LEAVE_MSG).replace("{vPrefix}", getChatSupport().getPrefix(p)).replace("{playername}", p.getName()).replace("{player}", p.getDisplayName()));
+            on.sendMessage(getMsg(on, Messages.COMMAND_LEAVE_MSG)
+            .replace("{vPrefix}", getChatSupport().getPrefix(p))
+            .replace("{vSuffix}", getChatSupport().getSuffix(p))
+            .replace("{playername}", p.getName())
+            .replace("{player}", p.getDisplayName()));
         }
 
         if (getServerType() == ServerType.SHARED) {
@@ -1151,10 +1155,20 @@ public class Arena implements IArena {
         p.closeInventory();
         players.add(p);
         for (Player on : players) {
-            on.sendMessage(getMsg(on, Messages.COMMAND_REJOIN_PLAYER_RECONNECTED).replace("{vPrefix}", getChatSupport().getPrefix(p)).replace("{vSuffix}", getChatSupport().getSuffix(p)).replace("{playername}", p.getName()).replace("{player}", p.getDisplayName()).replace("{on}", String.valueOf(getPlayers().size())).replace("{max}", String.valueOf(getMaxPlayers())));
+            on.sendMessage(getMsg(on, Messages.COMMAND_REJOIN_PLAYER_RECONNECTED)
+            .replace("{vPrefix}", getChatSupport().getPrefix(p))
+            .replace("{vSuffix}", getChatSupport().getSuffix(p))
+            .replace("{playername}", p.getName())
+            .replace("{player}", p.getDisplayName())
+            .replace("{on}", String.valueOf(getPlayers().size())).replace("{max}", String.valueOf(getMaxPlayers())));
         }
         for (Player on : spectators) {
-            on.sendMessage(getMsg(on, Messages.COMMAND_REJOIN_PLAYER_RECONNECTED).replace("{vPrefix}", getChatSupport().getPrefix(p)).replace("{vSuffix}", getChatSupport().getSuffix(p)).replace("{playername}", p.getName()).replace("{player}", p.getDisplayName()).replace("{on}", String.valueOf(getPlayers().size())).replace("{max}", String.valueOf(getMaxPlayers())));
+            on.sendMessage(getMsg(on, Messages.COMMAND_REJOIN_PLAYER_RECONNECTED)
+            .replace("{vPrefix}", getChatSupport().getPrefix(p))
+            .replace("{vSuffix}", getChatSupport().getSuffix(p))
+            .replace("{playername}", p.getName())
+            .replace("{player}", p.getDisplayName())
+            .replace("{on}", String.valueOf(getPlayers().size())).replace("{max}", String.valueOf(getMaxPlayers())));
         }
         setArenaByPlayer(p, this);
         /* save player inventory etc */
