@@ -203,7 +203,35 @@ public class PAPISupport extends PlaceholderExpansion {
                         if (a.getStatus() == GameState.playing) {
                             ITeam bwt = a.getTeam(player);
                             if (bwt != null) {
+                                replay = bwt.getColor().chat() + bwt.getName().substring(0,1).toUpperCase();
+                            }
+                        }
+                    } else {
+                        replay = Language.getMsg(player, Messages.FORMAT_PAPI_PLAYER_TEAM_SPECTATOR);
+                    }
+                }
+                break;
+            case "player_team_letter_colored_bold":
+                if (a != null) {
+                    if (a.isPlayer(player)) {
+                        if (a.getStatus() == GameState.playing) {
+                            ITeam bwt = a.getTeam(player);
+                            if (bwt != null) {
                                 replay = bwt.getColor().chat() + "&l" + bwt.getName().substring(0,1).toUpperCase();
+                            }
+                        }
+                    } else {
+                        replay = Language.getMsg(player, Messages.FORMAT_PAPI_PLAYER_TEAM_SPECTATOR);
+                    }
+                }
+                break;
+            case "player_team_initials":
+                if (a != null) {
+                    if (a.isPlayer(player)) {
+                        if (a.getStatus() == GameState.playing) {
+                            ITeam bwt = a.getTeam(player);
+                            if (bwt != null) {
+                                replay = bwt.getColor().chat() + "&l" + bwt.getName().substring(0,1).toUpperCase() + " " + bwt.getColor().chat();
                             }
                         }
                     } else {
