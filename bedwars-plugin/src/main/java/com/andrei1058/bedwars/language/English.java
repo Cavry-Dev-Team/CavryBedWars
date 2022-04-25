@@ -212,10 +212,10 @@ public class English extends Language {
         yml.addDefault(Messages.INTERACT_CANNOT_PLACE_BLOCK, "{prefix}&cYou can't place blocks here!");
         yml.addDefault(Messages.INTERACT_CANNOT_BREAK_BLOCK, "{prefix}&cYou can only break blocks placed by a player!");
         yml.addDefault(Messages.INTERACT_CANNOT_BREAK_OWN_BED, "&cYou can't destroy your own bed!");
-        yml.addDefault(Messages.INTERACT_BED_DESTROY_CHAT_ANNOUNCEMENT, "\n&f&lBED DESTRUCTION > {TeamColor}{TeamName} Bed &7was deep fried by {PlayerColor}{PlayerName}&7!\n");
+        yml.addDefault(Messages.INTERACT_BED_DESTROY_CHAT_ANNOUNCEMENT, "&7\n&f&lBED DESTRUCTION > {TeamColor}{TeamName} Bed &7was deep fried by {PlayerColor}{PlayerName}&7!\n&7");
         yml.addDefault(Messages.INTERACT_BED_DESTROY_TITLE_ANNOUNCEMENT, "&cBED DESTROYED!");
         yml.addDefault(Messages.INTERACT_BED_DESTROY_SUBTITLE_ANNOUNCEMENT, "&fYou will no longer respawn!");
-        yml.addDefault(Messages.INTERACT_BED_DESTROY_CHAT_ANNOUNCEMENT_TO_VICTIM, "&f&lBED DESTRUCTION > &7Your bed was destroyed by {PlayerColor}{PlayerName}&7!");
+        yml.addDefault(Messages.INTERACT_BED_DESTROY_CHAT_ANNOUNCEMENT_TO_VICTIM, "&7\n&f&lBED DESTRUCTION > &7Your bed was destroyed by {PlayerColor}{PlayerName}&7!\n&7");
         yml.addDefault(Messages.INTERACT_CHEST_CANT_OPEN_TEAM_ELIMINATED, "&cYou can't open this chest because this team wasn't eliminated!");
         yml.addDefault(Messages.PLAYER_DIE_VOID_FALL_REGULAR_KILL, "{PlayerColor}{PlayerName} &7fell into the void.");
         yml.addDefault(Messages.PLAYER_DIE_VOID_FALL_FINAL_KILL, "{PlayerColor}{PlayerName} &7fell into the void. &b&lFINAL KILL!");
@@ -233,10 +233,10 @@ public class English extends Language {
         yml.addDefault(Messages.PLAYER_DIE_PVP_FINAL_KILL, "{PlayerColor}{PlayerName} &7was killed by {KillerColor}{KillerName}&7. &b&lFINAL KILL!");
         yml.addDefault(Messages.PLAYER_DIE_UNKNOWN_REASON_REGULAR, "{PlayerColor}{PlayerName} &7died.");
         yml.addDefault(Messages.PLAYER_DIE_UNKNOWN_REASON_FINAL_KILL, "{PlayerColor}{PlayerName} &7died. &b&lFINAL KILL!");
-        yml.addDefault(Messages.PLAYER_DIE_SHOOT_REGULAR, "{PlayerColor}{PlayerName} &7was shoot by {KillerColor}{KillerName}&7!");
-        yml.addDefault(Messages.PLAYER_DIE_SHOOT_FINAL_KILL, "{PlayerColor}{PlayerName} &7was shoot by {KillerColor}{KillerName}&7! &b&lFINAL KILL!");
-        yml.addDefault(Messages.PLAYER_DIE_DEBUG_REGULAR, "{PlayerColor}{PlayerName} &7was killed by {KillerColor}{KillerTeamName}'s &7BedBug!");
-        yml.addDefault(Messages.PLAYER_DIE_DEBUG_FINAL_KILL, "{PlayerColor}{PlayerName} &7was killed by {KillerColor}{KillerTeamName}'s &7BedBug! &b&lFINAL KILL!");
+        yml.addDefault(Messages.PLAYER_DIE_SHOOT_REGULAR, "{PlayerColor}{PlayerName} &7was shot by {KillerColor}{KillerName}&7.");
+        yml.addDefault(Messages.PLAYER_DIE_SHOOT_FINAL_KILL, "{PlayerColor}{PlayerName} &7was shot by {KillerColor}{KillerName}&7! &b&lFINAL KILL.");
+        yml.addDefault(Messages.PLAYER_DIE_DEBUG_REGULAR, "{PlayerColor}{PlayerName} &7was killed by {KillerColor}{KillerTeamName}'s &7Bed Bug!");
+        yml.addDefault(Messages.PLAYER_DIE_DEBUG_FINAL_KILL, "{PlayerColor}{PlayerName} &7was killed by {KillerColor}{KillerTeamName}'s &7Bed Bug! &b&lFINAL KILL!");
         yml.addDefault(Messages.PLAYER_DIE_IRON_GOLEM_REGULAR, "{PlayerColor}{PlayerName} &7was killed by {KillerColor}{KillerTeamName}'s &7Iron Golem!");
         yml.addDefault(Messages.PLAYER_DIE_IRON_GOLEM_FINAL_KILL, "{PlayerColor}{PlayerName} &7was killed by {KillerColor}{KillerTeamName}'s &7Iron Golem! &b&lFINAL KILL!");
         yml.addDefault(Messages.PLAYER_DIE_REWARD_DIAMOND, "{prefix}&b+{amount} {meaning}");
@@ -264,7 +264,7 @@ public class English extends Language {
         yml.addDefault(Messages.NPC_NAME_SOLO_UPGRADES, "&bSOLO UPGRADES,&e&lRIGHT CLICK");
         yml.addDefault(Messages.NPC_NAME_TEAM_SHOP, "&bTEAM SHOP,&e&lRIGHT CLICK");
         yml.addDefault(Messages.NPC_NAME_SOLO_SHOP, "&bITEM SHOP,&e&lRIGHT CLICK");
-        yml.addDefault(Messages.TEAM_ELIMINATED_CHAT, "\n&f&lTEAM ELIMINATED > {TeamColor}{TeamName} Team &chas been eliminated!\n");
+        yml.addDefault(Messages.TEAM_ELIMINATED_CHAT, "&7\n&f&lTEAM ELIMINATED > {TeamColor}{TeamName} Team &chas been eliminated!\n&7);
         yml.addDefault(Messages.NEXT_EVENT_BEDS_DESTROY, "&fBed gone");
         yml.addDefault(Messages.NEXT_EVENT_DIAMOND_UPGRADE_II, "&fDiamond II");
         yml.addDefault(Messages.NEXT_EVENT_DIAMOND_UPGRADE_III, "&fDiamond III");
@@ -318,15 +318,15 @@ public class English extends Language {
 
         yml.addDefault(Messages.SCOREBOARD_DEFAULT_WAITING, Arrays.asList("&b&lBED WARS", "&7{date} &8bw-mg1", "", "&fMap: &b{map}", "", "&fPlayers: &b{on}/{max}", "", "&fWaiting...", "", "&fMode: &b{group}", "&fVersion: &7{version}", "", "&b{server_ip}"));
         yml.addDefault(Messages.SCOREBOARD_DEFAULT_STARTING, Arrays.asList("&b&lBED WARS", "&7{date} &8bw-mg1", "", "&fMap: &b{map}", "", "&fPlayers: &b{on}/{max}", "", "&fStarting in &b{time}s", "", "&fMode: &b{group}", "&fVersion: &7{version}", "", "&b{server_ip}"));
-        yml.addDefault(Messages.SCOREBOARD_DEFAULT_PLAYING, Arrays.asList("&b&lBED WARS", "&7{date}", "", "&f{nextEvent} in &a{time}", "", "{TeamRedColor}R&f {TeamRedName}&f: {TeamRedStatus}", "{TeamBlueColor}B&f {TeamBlueName}&f: {TeamBlueStatus}", "{TeamGreenColor}G&f {TeamGreenName}&f: {TeamGreenStatus}", "{TeamYellowColor}Y&f {TeamYellowName}&f: {TeamYellowStatus}", "{TeamAquaColor}A&f {TeamAquaName}&f: {TeamAquaStatus}", "{TeamWhiteColor}W&f {TeamWhiteName}&f: {TeamWhiteStatus}", "{TeamPinkColor}P&f {TeamPinkName}&f: {TeamPinkStatus}", "{TeamGrayColor}S&f {TeamGrayName}&f: {TeamGrayStatus}", "", "&b{server_ip}"));
+        yml.addDefault(Messages.SCOREBOARD_DEFAULT_PLAYING, Arrays.asList("&b&lBED WARS", "&7{date}", "", "&f{nextEvent} in &b{time}", "", "{TeamRedColor}R&f {TeamRedName}&f: {TeamRedStatus}", "{TeamBlueColor}B&f {TeamBlueName}&f: {TeamBlueStatus}", "{TeamGreenColor}G&f {TeamGreenName}&f: {TeamGreenStatus}", "{TeamYellowColor}Y&f {TeamYellowName}&f: {TeamYellowStatus}", "{TeamAquaColor}A&f {TeamAquaName}&f: {TeamAquaStatus}", "{TeamWhiteColor}W&f {TeamWhiteName}&f: {TeamWhiteStatus}", "{TeamPinkColor}P&f {TeamPinkName}&f: {TeamPinkStatus}", "{TeamGrayColor}S&f {TeamGrayName}&f: {TeamGrayStatus}", "", "&b{server_ip}"));
 
         yml.addDefault("scoreboard.Doubles.playing", Arrays.asList("&b&lBED WARS", "&7{date}", "", "&f{nextEvent} in &b{time}", "",
                 "{TeamRedColor}R&f {TeamRedName}&f: {TeamRedStatus}", "{TeamBlueColor}B&f {TeamBlueName}&f: {TeamBlueStatus}", "{TeamGreenColor}G&f {TeamGreenName}&f: {TeamGreenStatus}", "{TeamYellowColor}Y&f {TeamYellowName}&f: {TeamYellowStatus}", "{TeamAquaColor}A&f {TeamAquaName}&f: {TeamAquaStatus}", "{TeamWhiteColor}W&f {TeamWhiteName}&f: {TeamWhiteStatus}", "{TeamPinkColor}P&f {TeamPinkName}&f: {TeamPinkStatus}", "{TeamGrayColor}S&f {TeamGrayName}&f: {TeamGrayStatus}", "", "&b{server_ip}"));
 
-        yml.addDefault("scoreboard.3v3v3v3.playing", Arrays.asList("&b&lBED WARS", "&7{date}", "", "&f{nextEvent} in &a{time}", "", "{TeamRedColor}R&f {TeamRedName}&f: {TeamRedStatus}", "{TeamBlueColor}B&f {TeamBlueName}&f: {TeamBlueStatus}", "{TeamGreenColor}G&f {TeamGreenName}&f: {TeamGreenStatus}", "{TeamYellowColor}Y&f {TeamYellowName}&f: {TeamYellowStatus}",
+        yml.addDefault("scoreboard.3v3v3v3.playing", Arrays.asList("&b&lBED WARS", "&7{date}", "", "&f{nextEvent} in &b{time}", "", "{TeamRedColor}R&f {TeamRedName}&f: {TeamRedStatus}", "{TeamBlueColor}B&f {TeamBlueName}&f: {TeamBlueStatus}", "{TeamGreenColor}G&f {TeamGreenName}&f: {TeamGreenStatus}", "{TeamYellowColor}Y&f {TeamYellowName}&f: {TeamYellowStatus}",
                 "", "&fKills: &b{kills}", "&fFinal Kills: &b{finalKills}", "&fBeds Broken: &b{beds}", "", "&b{server_ip}"));
 
-        yml.addDefault("scoreboard.4v4v4v4.playing", Arrays.asList("&b&lBED WARS", "&7{date}", "", "&f{nextEvent} in &a{time}", "", "{TeamRedColor}R&f {TeamRedName}&f: {TeamRedStatus}", "{TeamBlueColor}B&f {TeamBlueName}&f: {TeamBlueStatus}", "{TeamGreenColor}G&f {TeamGreenName}&f: {TeamGreenStatus}", "{TeamYellowColor}Y&f {TeamYellowName}&f: {TeamYellowStatus}",
+        yml.addDefault("scoreboard.4v4v4v4.playing", Arrays.asList("&b&lBED WARS", "&7{date}", "", "&f{nextEvent} in &b{time}", "", "{TeamRedColor}R&f {TeamRedName}&f: {TeamRedStatus}", "{TeamBlueColor}B&f {TeamBlueName}&f: {TeamBlueStatus}", "{TeamGreenColor}G&f {TeamGreenName}&f: {TeamGreenStatus}", "{TeamYellowColor}Y&f {TeamYellowName}&f: {TeamYellowStatus}",
                 "", "&fKills: &b{kills}", "&fFinal Kills: &b{finalKills}", "&fBeds Broken: &b{beds}", "", "&b{server_ip}"));
 
         yml.addDefault(Messages.SCOREBOARD_LOBBY, Arrays.asList("&6&lBedWars,&4&lB&6edWars,&6&lB&4e&6dWars,&6&lBe&4d&6Wars,&6&lBed&4W&6ars,&6&lBedW&4a&6rs,&6&lBedWa&4r&6s,&6&lBedWar&4s,&6&lBedWars", "&fYour Level: {level}", "", "&fProgress: &a{currentXp}&7/&b{requiredXp}", "{progress}", "", "&7{player}", "", "&fCoins: &a{money}"
