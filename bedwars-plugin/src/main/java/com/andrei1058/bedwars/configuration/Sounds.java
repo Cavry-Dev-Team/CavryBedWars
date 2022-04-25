@@ -54,13 +54,13 @@ public class Sounds {
         addDefSound("join-denied", BedWars.getForCurrentVersion("ENTITY_ENDERMAN_TELEPORT", "ENTITY_ENDERMAN_TELEPORT", "ENTITY_ENDERMAN_TELEPORT"));
         addDefSound("join-allowed", BedWars.getForCurrentVersion("SLIME_WALK", "ENTITY_SLIME_JUMP", "ENTITY_SLIME_JUMP"));
         addDefSound("spectator-gui-click", BedWars.getForCurrentVersion("SLIME_WALK", "ENTITY_SLIME_JUMP", "ENTITY_SLIME_JUMP"));
-        addDefSound(SOUNDS_COUNTDOWN_TICK, BedWars.getForCurrentVersion("CHICKEN_EGG_POP", "ENTITY_CHICKEN_EGG", "ENTITY_CHICKEN_EGG"));
-        addDefSound(SOUNDS_COUNTDOWN_TICK_X + "5", BedWars.getForCurrentVersion("CHICKEN_EGG_POP", "ENTITY_CHICKEN_EGG", "ENTITY_CHICKEN_EGG"));
-        addDefSound(SOUNDS_COUNTDOWN_TICK_X + "4", BedWars.getForCurrentVersion("CHICKEN_EGG_POP", "ENTITY_CHICKEN_EGG", "ENTITY_CHICKEN_EGG"));
-        addDefSound(SOUNDS_COUNTDOWN_TICK_X + "3", BedWars.getForCurrentVersion("CHICKEN_EGG_POP", "ENTITY_CHICKEN_EGG", "ENTITY_CHICKEN_EGG"));
-        addDefSound(SOUNDS_COUNTDOWN_TICK_X + "2", BedWars.getForCurrentVersion("CHICKEN_EGG_POP", "ENTITY_CHICKEN_EGG", "ENTITY_CHICKEN_EGG"));
-        addDefSound(SOUNDS_COUNTDOWN_TICK_X + "1", BedWars.getForCurrentVersion("CHICKEN_EGG_POP", "ENTITY_CHICKEN_EGG", "ENTITY_CHICKEN_EGG"));
-        addDefSound(SOUND_GAME_START, BedWars.getForCurrentVersion("SLIME_ATTACK", "BLOCK_SLIME_FALL", "BLOCK_SLIME_BLOCK_FALL"));
+        addDefSound(SOUNDS_COUNTDOWN_TICK, BedWars.getForCurrentVersion("NOTE_STICKS", "BLOCK_NOTE_BLOCK_PLING", "BLOCK_NOTE_BLOCK_PLING"));
+        addDefSound(SOUNDS_COUNTDOWN_TICK_X + "5", BedWars.getForCurrentVersion("NOTE_STICKS", "BLOCK_NOTE_BLOCK_PLING", "BLOCK_NOTE_BLOCK_PLING"));
+        addDefSound(SOUNDS_COUNTDOWN_TICK_X + "4", BedWars.getForCurrentVersion("NOTE_STICKS", "BLOCK_NOTE_BLOCK_PLING", "BLOCK_NOTE_BLOCK_PLING"));
+        addDefSound(SOUNDS_COUNTDOWN_TICK_X + "3", BedWars.getForCurrentVersion("NOTE_STICKS", "BLOCK_NOTE_BLOCK_PLING", "BLOCK_NOTE_BLOCK_PLING"));
+        addDefSound(SOUNDS_COUNTDOWN_TICK_X + "2", BedWars.getForCurrentVersion("NOTE_STICKS", "BLOCK_NOTE_BLOCK_PLING", "BLOCK_NOTE_BLOCK_PLING"));
+        addDefSound(SOUNDS_COUNTDOWN_TICK_X + "1", BedWars.getForCurrentVersion("NOTE_STICKS", "BLOCK_NOTE_BLOCK_PLING", "BLOCK_NOTE_BLOCK_PLING"));
+        addDefSound(SOUND_GAME_START, BedWars.getForCurrentVersion("ENDERDRAGON_GROWL", "ENTITY_ENDERDRAGON_GROWL", "ENTITY_ENDERDRAGON_GROWL"));
 
         addDefSound(SOUNDS_KILL, BedWars.getForCurrentVersion("ORB_PICKUP", "ENTITY_EXPERIENCE_ORB_PICKUP", "ENTITY_EXPERIENCE_ORB_PICKUP"));
 
