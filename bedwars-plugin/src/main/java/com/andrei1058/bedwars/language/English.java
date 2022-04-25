@@ -264,7 +264,7 @@ public class English extends Language {
         yml.addDefault(Messages.NPC_NAME_SOLO_UPGRADES, "&bSOLO UPGRADES,&e&lRIGHT CLICK");
         yml.addDefault(Messages.NPC_NAME_TEAM_SHOP, "&bTEAM SHOP,&e&lRIGHT CLICK");
         yml.addDefault(Messages.NPC_NAME_SOLO_SHOP, "&bITEM SHOP,&e&lRIGHT CLICK");
-        yml.addDefault(Messages.TEAM_ELIMINATED_CHAT, "&7\n&f&lTEAM ELIMINATED > {TeamColor}{TeamName} Team &chas been eliminated!\n&7);
+        yml.addDefault(Messages.TEAM_ELIMINATED_CHAT, "&7\n&f&lTEAM ELIMINATED > {TeamColor}{TeamName} Team &chas been eliminated!\n&7");
         yml.addDefault(Messages.NEXT_EVENT_BEDS_DESTROY, "&fBed gone");
         yml.addDefault(Messages.NEXT_EVENT_DIAMOND_UPGRADE_II, "&fDiamond II");
         yml.addDefault(Messages.NEXT_EVENT_DIAMOND_UPGRADE_III, "&fDiamond III");
