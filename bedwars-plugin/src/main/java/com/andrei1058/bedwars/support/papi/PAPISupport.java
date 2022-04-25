@@ -203,7 +203,7 @@ public class PAPISupport extends PlaceholderExpansion {
                         if (a.getStatus() == GameState.playing) {
                             ITeam bwt = a.getTeam(player);
                             if (bwt != null) {
-                                replay = bwt.getColor().chat() + bwt.getName().substring(0,1).toUpperCase();
+                                replay = bwt.getColor().chat() + "&l" + bwt.getName().substring(0,1).toUpperCase();
                             }
                         }
                     } else {
