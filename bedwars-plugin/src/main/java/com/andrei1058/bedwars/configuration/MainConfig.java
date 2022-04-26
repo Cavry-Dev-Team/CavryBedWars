@@ -135,7 +135,7 @@ public class MainConfig extends ConfigManager {
         savePreGameCommandItem("leave", "bw leave", false, getForCurrentVersion("BED", "BED", "RED_BED"), 0, 8);
 
         /* Spectator Command Items */
-        saveSpectatorCommandItem("teleporter", "bw teleporter", false, getForCurrentVersion("SKULL_ITEM", "SKULL_ITEM", "PLAYER_HEAD"), 3, 0);
+        saveSpectatorCommandItem("teleporter", "bw teleporter", false, getForCurrentVersion("COMPASS", "COMPASS", "COMPASS"), 0, 0);
         saveSpectatorCommandItem("leave", "bw leave", false, getForCurrentVersion("BED", "BED", "RED_BED"), 0, 8);
 
         yml.addDefault(ConfigPath.GENERAL_CONFIGURATION_ARENA_SELECTOR_SETTINGS_SIZE, 27);

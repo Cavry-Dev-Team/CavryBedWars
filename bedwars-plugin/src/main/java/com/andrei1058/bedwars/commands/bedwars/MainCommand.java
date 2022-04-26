@@ -129,7 +129,7 @@ public class MainCommand extends BukkitCommand implements ParentCommand {
                         s.sendMessage("§8|- " + "§7§oPlugin by andrei1058 modified for Cavry Network");
                         s.sendMessage("");
                         sendSubCommands((Player) s);
-                        s.sendMessage("")
+                        s.sendMessage("");
                     }
                 } else {
                     s.sendMessage("");
