@@ -71,7 +71,7 @@ public class MoneyListeners implements Listener {
             if (finalkill > 0) {
                 BedWars.getEconomy ().giveMoney ( player, finalkill );
                 Bukkit.getScheduler().runTaskLater(BedWars.plugin, () -> {
-                    player.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(Language.getMsg ( player, Messages.MONEY_REWARD_FINAL_KILL ).replace ( "{money}", String.valueOf ( finalkill ) )));
+                    sendActionBar(player, Language.getMsg ( player, Messages.MONEY_REWARD_FINAL_KILL ).replace ( "{money}", String.valueOf ( finalkill ) ));
                     player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_FINAL_KILL ).replace ( "{money}", String.valueOf ( finalkill ) ) );
                 }, 10L);
             }
@@ -80,9 +80,14 @@ public class MoneyListeners implements Listener {
                 BedWars.getEconomy ().giveMoney ( player, regularkill );
                 Bukkit.getScheduler().runTaskLater(BedWars.plugin, () -> {
                     player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_REGULAR_KILL ).replace ( "{money}", String.valueOf ( regularkill ) ) );
-                    player.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(Language.getMsg ( player, Messages.MONEY_REWARD_REGULAR_KILL ).replace ( "{money}", String.valueOf ( regularkill ) )));
+                    sendActionBar(player, Language.getMsg ( player, Messages.MONEY_REWARD_REGULAR_KILL ).replace ( "{money}", String.valueOf ( regularkill ) ) );
                 }, 10L);
             }
         }
+    }
+
+    public void sendActionBar(Player player, String message){
+        PacketPlayOutChat packet = new PacketPlayOutChat(new ChatComponentText(message), (byte)2);
+        ((CraftPlayer) player).getHandle().playerConnection.sendPacket(packet);
     }
 }
