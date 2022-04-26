@@ -78,7 +78,7 @@ public class MoneyListeners implements Listener {
         } else {
             if (regularkill > 0) {
                 BedWars.getEconomy ().giveMoney ( player, regularkill );
-                Bukkit.getScheduler().runTaskLater(BedWars.plugin,, () -> {
+                Bukkit.getScheduler().runTaskLater(BedWars.plugin, () -> {
                     player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_REGULAR_KILL ).replace ( "{money}", String.valueOf ( regularkill ) ) );
                     player.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(Language.getMsg ( player, Messages.MONEY_REWARD_REGULAR_KILL ).replace ( "{money}", String.valueOf ( regularkill ) )));
                 }, 10L);
