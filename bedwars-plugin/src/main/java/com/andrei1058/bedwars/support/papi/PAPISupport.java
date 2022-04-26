@@ -233,6 +233,8 @@ public class PAPISupport extends PlaceholderExpansion {
                             if (bwt != null) {
                                 replay = bwt.getColor().chat() + "&l" + bwt.getName().substring(0,1).toUpperCase() + " " + bwt.getColor().chat();
                             }
+                        } else {
+                            replay = Language.getMsg(player, Messages.FORMAT_PAPI_PLAYER_TEAM_SPECTATOR);
                         }
                     } else {
                         replay = Language.getMsg(player, Messages.FORMAT_PAPI_PLAYER_TEAM_SPECTATOR);
