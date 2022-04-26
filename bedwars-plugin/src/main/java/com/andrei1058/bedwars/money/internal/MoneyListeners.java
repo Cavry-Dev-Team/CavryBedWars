@@ -7,13 +7,16 @@ import com.andrei1058.bedwars.api.events.player.PlayerKillEvent;
 import com.andrei1058.bedwars.api.language.Language;
 import com.andrei1058.bedwars.api.language.Messages;
 import com.andrei1058.bedwars.configuration.MoneyConfig;
-import net.md_5.bungee.api.ChatMessageType;
-import net.md_5.bungee.api.chat.TextComponent;
+import net.minecraft.server.v1_8_R3.ChatComponentText;
+import net.minecraft.server.v1_8_R3.PacketPlayOutChat;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
+import java.awt.*;
 import java.util.UUID;
 
 public class MoneyListeners implements Listener {
@@ -65,22 +68,22 @@ public class MoneyListeners implements Listener {
         Player player = e.getKiller ();
         Player victim = e.getVictim ();
         if (player == null || victim.equals(player)) return;
-        int finalkill = MoneyConfig.money.getInt ( "money-rewards.final-kill" );
-        int regularkill = MoneyConfig.money.getInt ( "money-rewards.regular-kill" );
+        int finalKill = MoneyConfig.money.getInt ( "money-rewards.final-kill" );
+        int regularKill = MoneyConfig.money.getInt ( "money-rewards.regular-kill" );
         if (e.getCause ().isFinalKill ()) {
-            if (finalkill > 0) {
-                BedWars.getEconomy ().giveMoney ( player, finalkill );
+            if (finalKill > 0) {
+                BedWars.getEconomy ().giveMoney ( player, finalKill );
                 Bukkit.getScheduler().runTaskLater(BedWars.plugin, () -> {
-                    sendActionBar(player, Language.getMsg ( player, Messages.MONEY_REWARD_FINAL_KILL ).replace ( "{money}", String.valueOf ( finalkill ) ));
-                    player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_FINAL_KILL ).replace ( "{money}", String.valueOf ( finalkill ) ) );
+                    player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_FINAL_KILL ).replace ( "{money}", String.valueOf ( finalKill ) ) );
+                    sendActionBar(player, ChatColor.GOLD + "&6+" + finalKill + " coins!");
                 }, 10L);
             }
         } else {
-            if (regularkill > 0) {
-                BedWars.getEconomy ().giveMoney ( player, regularkill );
+            if (regularKill > 0) {
+                BedWars.getEconomy ().giveMoney ( player, regularKill );
                 Bukkit.getScheduler().runTaskLater(BedWars.plugin, () -> {
-                    player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_REGULAR_KILL ).replace ( "{money}", String.valueOf ( regularkill ) ) );
-                    sendActionBar(player, Language.getMsg ( player, Messages.MONEY_REWARD_REGULAR_KILL ).replace ( "{money}", String.valueOf ( regularkill ) ) );
+                    player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_REGULAR_KILL ).replace ( "{money}", String.valueOf ( regularKill ) ) );
+                    sendActionBar(player, ChatColor.GOLD + "&6+" + regularKill + " coins!");
                 }, 10L);
             }
         }
