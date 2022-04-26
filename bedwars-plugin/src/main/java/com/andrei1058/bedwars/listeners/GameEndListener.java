@@ -26,9 +26,11 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
+import java.util.UUID;
+
 public class GameEndListener implements Listener {
 
-    //Do not touch this
+    // Gonna work on this later
     @EventHandler
     public void onGameEnd(GameEndEvent e) {
         for (UUID p : e.getWinners ()) {
