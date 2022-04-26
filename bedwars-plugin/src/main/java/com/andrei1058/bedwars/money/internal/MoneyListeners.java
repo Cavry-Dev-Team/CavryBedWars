@@ -7,6 +7,8 @@ import com.andrei1058.bedwars.api.events.player.PlayerKillEvent;
 import com.andrei1058.bedwars.api.language.Language;
 import com.andrei1058.bedwars.api.language.Messages;
 import com.andrei1058.bedwars.configuration.MoneyConfig;
+import net.md_5.bungee.api.ChatMessageType;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -69,6 +71,7 @@ public class MoneyListeners implements Listener {
             if (finalkill > 0) {
                 BedWars.getEconomy ().giveMoney ( player, finalkill );
                 Bukkit.getScheduler().runTaskLater(this, () -> {
+                    player.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(Language.getMsg ( player, Messages.MONEY_REWARD_FINAL_KILL ).replace ( "{money}", String.valueOf ( finalkill ) )));
                     player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_FINAL_KILL ).replace ( "{money}", String.valueOf ( finalkill ) ) );
                 }, 10L);
             }
@@ -77,6 +80,7 @@ public class MoneyListeners implements Listener {
                 BedWars.getEconomy ().giveMoney ( player, regularkill );
                 Bukkit.getScheduler().runTaskLater(this, () -> {
                     player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_REGULAR_KILL ).replace ( "{money}", String.valueOf ( regularkill ) ) );
+                    player.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(Language.getMsg ( player, Messages.MONEY_REWARD_REGULAR_KILL ).replace ( "{money}", String.valueOf ( regularkill ) )));
                 }, 10L);
             }
         }
