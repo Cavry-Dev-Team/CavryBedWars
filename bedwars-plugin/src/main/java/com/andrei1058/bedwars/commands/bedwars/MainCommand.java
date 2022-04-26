@@ -129,9 +129,13 @@ public class MainCommand extends BukkitCommand implements ParentCommand {
                         s.sendMessage("§8|- " + "§7§oPlugin by andrei1058 modified for Cavry Network");
                         s.sendMessage("");
                         sendSubCommands((Player) s);
+                        s.sendMessage("")
                     }
                 } else {
-                    s.sendMessage("§f   bw safemode §eenable/ disable");
+                    s.sendMessage("");
+                    s.sendMessage("§8|- " + "§bCavry Bed Wars v1.0 ");
+                    s.sendMessage("§8|- " + "§7§oPlugin by andrei1058 modified for Cavry Network");
+                    s.sendMessage("");
                 }
             } else {
                 if (s instanceof ConsoleCommandSender) {
