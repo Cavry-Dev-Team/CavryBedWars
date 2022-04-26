@@ -192,7 +192,7 @@ public class English extends Language {
         yml.addDefault(Messages.FORMATTING_GENERATOR_TIER3, "III");
         yml.addDefault(Messages.FORMATTING_DESPAWNABLE_UTILITY_NPC_HEALTH, "▮ ");
         yml.addDefault(Messages.FORMATTING_STATS_DATE_FORMAT, "yyyy/MM/dd HH:mm");
-        yml.addDefault(Messages.FORMAT_PAPI_PLAYER_TEAM_TEAM, "{TeamColor}&l{TeamLetter} {TeamColor}");
+        yml.addDefault(Messages.FORMAT_PAPI_PLAYER_TEAM_TEAM, "{TeamColor}[{TeamName}]");
         yml.addDefault(Messages.FORMAT_PAPI_PLAYER_TEAM_SHOUT, "&6[SHOUT]");
         yml.addDefault(Messages.FORMAT_PAPI_PLAYER_TEAM_SPECTATOR, "&7[SPECT] ");
         yml.addDefault(Messages.MEANING_FULL, "Full");
@@ -278,19 +278,19 @@ public class English extends Language {
         yml.addDefault(Messages.NEXT_EVENT_TITLE_ANNOUNCE_SUDDEN_DEATH, "&cSudden Death");
         yml.addDefault(Messages.NEXT_EVENT_SUBTITLE_ANNOUNCE_SUDDEN_DEATH, "");
         yml.addDefault(Messages.NEXT_EVENT_CHAT_ANNOUNCE_SUDDEN_DEATH, "&cSUDDEN DEATH: &6+&b{TeamDragons} {TeamColor}{TeamName} Dragon!");
-        yml.addDefault(Messages.XP_REWARD_PER_MINUTE, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Play Time)");
+        yml.addDefault(Messages.XP_REWARD_PER_MINUTE, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Time Played)");
         yml.addDefault(Messages.XP_REWARD_WIN, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Game Win)");
         yml.addDefault(Messages.XP_REWARD_PER_TEAMMATE, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Team Support)");
         yml.addDefault(Messages.XP_REWARD_BED_DESTROY, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Bed Destroyed)");
         yml.addDefault(Messages.XP_REWARD_REGULAR_KILL, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Regular Kill)");
         yml.addDefault(Messages.XP_REWARD_FINAL_KILL, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Final Kill)");
 
-        yml.addDefault(Messages.MONEY_REWARD_PER_MINUTE, "{prefix}&8+ &6{money} Coins (Time Played)");
-        yml.addDefault(Messages.MONEY_REWARD_WIN, "{prefix}&8+ &6{money} Coins (Game Win)");
-        yml.addDefault(Messages.MONEY_REWARD_PER_TEAMMATE, "{prefix}&8+ &6{money} Coins (Team Support)");
-        yml.addDefault(Messages.MONEY_REWARD_BED_DESTROYED, "{prefix}&8+ &6{money} Coins (Bed Destroyed)");
-        yml.addDefault(Messages.MONEY_REWARD_FINAL_KILL, "{prefix}&8+ &6{money} Coins (Final Kill)");
-        yml.addDefault(Messages.MONEY_REWARD_REGULAR_KILL, "{prefix}&8+ &6{money} Coins (Regular Kill)");
+        yml.addDefault(Messages.MONEY_REWARD_PER_MINUTE, "{prefix}&8+ &6{money} coins! (Time Played)");
+        yml.addDefault(Messages.MONEY_REWARD_WIN, "{prefix}&8+ &6{money} coins! (Game Win)");
+        yml.addDefault(Messages.MONEY_REWARD_PER_TEAMMATE, "{prefix}&8+ &6{money} coins! (Team Support)");
+        yml.addDefault(Messages.MONEY_REWARD_BED_DESTROYED, "{prefix}&8+ &6{money} coins! (Bed Destroyed)");
+        yml.addDefault(Messages.MONEY_REWARD_FINAL_KILL, "{prefix}&8+ &6{money} coins! (Final Kill)");
+        yml.addDefault(Messages.MONEY_REWARD_REGULAR_KILL, "{prefix}&8+ &6{money} coins! (Regular Kill)");
 
         /* Lobby Command Items */
         yml.addDefault(Messages.GENERAL_CONFIGURATION_LOBBY_ITEMS_NAME.replace("%path%", "stats"), "&bMy Statistics &7(Right Click)");

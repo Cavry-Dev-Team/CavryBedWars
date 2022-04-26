@@ -133,7 +133,7 @@ public class SetupSession implements ISetupSession {
         ItemStack assisted = new ItemStack(Material.GLOWSTONE_DUST);
         ItemMeta am = assisted.getItemMeta();
         am.setDisplayName("§a§lEASY SETUP");
-        am.setLore(Arrays.asList("§8Setup Method", "", "§7Choose this setup method if", "§7you are a beginner and want", "&7an easy one to setup!", "", "&eClick to select!"));
+        am.setLore(Arrays.asList("§8Setup Method", "", "§7Choose this setup method if", "§7you are a beginner and want", "§7an easy one to setup!", "", "§eClick to select!"));
         assisted.setItemMeta(am);
         inv.setItem(getAssistedSlot(), assisted);
 
