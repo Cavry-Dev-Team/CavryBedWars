@@ -152,12 +152,16 @@ public class LevelListeners implements Listener {
         if (e.getCause ().isFinalKill ()) {
             if (finalkill > 0) {
                 PlayerLevel.getLevelByPlayer(player.getUniqueId()).addXp(finalkill, PlayerXpGainEvent.XpSource.FINAL_KILL);
-                player.sendMessage(Language.getMsg(player, Messages.XP_REWARD_FINAL_KILL).replace("{xp}", String.valueOf(finalkill)));
+                Bukkit.getScheduler().runTaskLater(BedWars.plugin, () -> {
+                    player.sendMessage(Language.getMsg(player, Messages.XP_REWARD_FINAL_KILL).replace("{xp}", String.valueOf(finalkill)));
+                }, 8L);
             }
         } else {
             if (regularkill > 0) {
                 PlayerLevel.getLevelByPlayer(player.getUniqueId()).addXp(regularkill, PlayerXpGainEvent.XpSource.REGULAR_KILL);
-                player.sendMessage(Language.getMsg(player, Messages.XP_REWARD_REGULAR_KILL).replace("{xp}", String.valueOf(regularkill)));
+                Bukkit.getScheduler().runTaskLater(BedWars.plugin, () -> {
+                    player.sendMessage(Language.getMsg(player, Messages.XP_REWARD_REGULAR_KILL).replace("{xp}", String.valueOf(regularkill)));
+                }, 8L);
             }
         }
     }

@@ -75,16 +75,16 @@ public class MoneyListeners implements Listener {
                 BedWars.getEconomy ().giveMoney ( player, finalKill );
                 Bukkit.getScheduler().runTaskLater(BedWars.plugin, () -> {
                     player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_FINAL_KILL ).replace ( "{money}", String.valueOf ( finalKill ) ) );
-                    sendActionBar(player, ChatColor.GOLD + "&6+" + finalKill + " coins!");
-                }, 10L);
+                    sendActionBar(player, ChatColor.GOLD + "+" + finalKill + " coins!");
+                }, 8L);
             }
         } else {
             if (regularKill > 0) {
                 BedWars.getEconomy ().giveMoney ( player, regularKill );
                 Bukkit.getScheduler().runTaskLater(BedWars.plugin, () -> {
                     player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_REGULAR_KILL ).replace ( "{money}", String.valueOf ( regularKill ) ) );
-                    sendActionBar(player, ChatColor.GOLD + "&6+" + regularKill + " coins!");
-                }, 10L);
+                    sendActionBar(player, ChatColor.GOLD + "+" + regularKill + " coins!");
+                }, 8L);
             }
         }
     }
