@@ -53,7 +53,7 @@ public class MapCommand extends BukkitCommand {
 
                 return false;
             } else {
-                player.sendMessage(ChatColor.GREEN + "You are currently playing on " ChatColor.YELLOW + arena.getDisplayName());
+                player.sendMessage(ChatColor.GREEN + "You are currently playing on " + ChatColor.YELLOW + arena.getDisplayName());
                 return true;
             }
         }
