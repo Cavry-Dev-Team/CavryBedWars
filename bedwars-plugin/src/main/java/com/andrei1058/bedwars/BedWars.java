@@ -43,6 +43,7 @@ import com.andrei1058.bedwars.commands.leave.LeaveCommand;
 import com.andrei1058.bedwars.commands.party.PartyCommand;
 import com.andrei1058.bedwars.commands.rejoin.RejoinCommand;
 import com.andrei1058.bedwars.commands.shout.ShoutCommand;
+import com.andrei1058.bedwars.commands.map.MapCommand;
 import com.andrei1058.bedwars.configuration.*;
 import com.andrei1058.bedwars.database.Database;
 import com.andrei1058.bedwars.database.SQLite;
@@ -239,6 +240,9 @@ public class BedWars extends JavaPlugin {
         Bukkit.getScheduler().runTaskLater(this, () -> {
             if (!nms.isBukkitCommandRegistered("shout")) {
                 nms.registerCommand("shout", new ShoutCommand("shout"));
+            }
+            if (!nms.isBukkitCommandRegistered("map")) {
+                nms.registerCommand("map", new MapCommand("map"));
             }
             nms.registerCommand("rejoin", new RejoinCommand("rejoin"));
             if (!(nms.isBukkitCommandRegistered("leave") && getServerType() == ServerType.BUNGEE)) {
