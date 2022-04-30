@@ -35,9 +35,10 @@ public class UpgradesConfig extends ConfigManager {
     public UpgradesConfig(String name, String dir) {
         super(plugin, name, dir);
         YamlConfiguration yml = this.getYml();
-        List<String> elements = Arrays.asList("upgrade-swords,10", "upgrade-armor,11", "upgrade-miner,12", "upgrade-forge,13",
-                "upgrade-heal-pool,14", "upgrade-dragon,15", "category-traps,16", "separator-glass,18,19,20,21,22,23,24,25,26",
-                "trap-slot-first,30", "trap-slot-second,31", "trap-slot-third,32");
+        List<String> elements = Arrays.asList("upgrade-swords,10", "upgrade-armor,11", "upgrade-miner,12", "upgrade-forge,19",
+                "upgrade-heal-pool,20", "upgrade-dragon,21", "separator-glass,27,28,29,30,31,32,33,34,35",
+                "trap-slot-first,39", "trap-slot-second,40", "trap-slot-third,41",
+                "base-trap-1,14", "base-trap-2,15", "base-trap-3,16", "base-trap-4,23");
         yml.addDefault("default-upgrades-settings.menu-content", elements);
         yml.addDefault("default-upgrades-settings.trap-start-price", 1);
         yml.addDefault("default-upgrades-settings.trap-increment-price", 1);
@@ -132,17 +133,17 @@ public class UpgradesConfig extends ConfigManager {
                     "GRAY_STAINED_GLASS"), 8, 3, false);
 
             addDefaultDisplayItem("base-trap-1", "TRIPWIRE_HOOK", 0, 1, false);
-            yml.addDefault("base-trap-1.receive", Arrays.asList("player-effect: BLINDNESS,1,5,enemy", "player-effect: SLOW,1,5,enemy"));
+            yml.addDefault("base-trap-1.receive", Arrays.asList("player-effect: BLINDNESS,0,5,enemy", "player-effect: SLOW,0,5,enemy"));
 
             addDefaultDisplayItem("base-trap-2", "FEATHER", 0, 1, false);
-            yml.addDefault("base-trap-2.receive", Collections.singletonList("player-effect: SPEED,1,15,base"));
+            yml.addDefault("base-trap-2.receive", Collections.singletonList("player-effect: SPEED,0,15,base"));
 
             addDefaultDisplayItem("base-trap-3", BedWars.getForCurrentVersion("REDSTONE_TORCH_ON", "REDSTONE_TORCH", "REDSTONE_TORCH"), 0, 1, false);
             yml.addDefault("base-trap-3.custom-announce", true);
             yml.addDefault("base-trap-3.receive", Collections.singletonList("remove-effect: INVISIBILITY,enemy"));
 
             addDefaultDisplayItem("base-trap-4", "IRON_PICKAXE", 0, 1, false);
-            yml.addDefault("base-trap-4.receive", Collections.singletonList("player-effect: SLOW_DIGGING,1,15,enemy"));
+            yml.addDefault("base-trap-4.receive", Collections.singletonList("player-effect: SLOW_DIGGING,0,15,enemy"));
 
             //noinspection ArraysAsListWithZeroOrOneArgument
             yml.addDefault("separator-back.on-click.player", Arrays.asList("bw upgradesmenu"));
