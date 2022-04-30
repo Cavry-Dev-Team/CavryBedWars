@@ -123,13 +123,18 @@ public class English extends Language {
         yml.addDefault(Messages.ARENA_GUI_SKIPPED_ITEM_NAME, "&7}");
         yml.addDefault(Messages.ARENA_GUI_SKIPPED_ITEM_LORE, Collections.emptyList());
         yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_CHAT, "{prefix}&eThe game starts in &c{time} &eseconds!");
-        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_TITLE, " ");
-        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_SUB_TITLE, "&a{second}");
-        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_SUB_TITLE + "-5", "&e5");
-        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_SUB_TITLE + "-4", "&e4");
-        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_SUB_TITLE + "-3", "&c3");
-        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_SUB_TITLE + "-2", "&c2");
-        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_SUB_TITLE + "-1", "&c1");
+        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_TITLE, "&a{second}");
+        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_SUB_TITLE, " ");
+        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_TITLE, "&e5");
+        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_TITLE, "&e4");
+        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_TITLE, "&c3");
+        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_TITLE, "&c2");
+        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_TITLE, "&c1");
+        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_SUB_TITLE, "&ePrepare to fight!");
+        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_SUB_TITLE, "&ePrepare to fight!");
+        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_SUB_TITLE, "&ePrepare to fight!");
+        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_SUB_TITLE, "&ePrepare to fight!");
+        yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_SUB_TITLE, "&ePrepare to fight!");
         yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_CANCELLED_TITLE, " ");
         yml.addDefault(Messages.ARENA_STATUS_START_COUNTDOWN_CANCELLED_SUB_TITLE, "&cWaiting for more players..");
         yml.addDefault(Messages.ARENA_STATUS_START_PLAYER_TITLE, "&aGO");
@@ -278,19 +283,19 @@ public class English extends Language {
         yml.addDefault(Messages.NEXT_EVENT_TITLE_ANNOUNCE_SUDDEN_DEATH, "&cSudden Death");
         yml.addDefault(Messages.NEXT_EVENT_SUBTITLE_ANNOUNCE_SUDDEN_DEATH, "");
         yml.addDefault(Messages.NEXT_EVENT_CHAT_ANNOUNCE_SUDDEN_DEATH, "&cSUDDEN DEATH: &6+&b{TeamDragons} {TeamColor}{TeamName} Dragon!");
-        yml.addDefault(Messages.XP_REWARD_PER_MINUTE, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Time Played)");
-        yml.addDefault(Messages.XP_REWARD_WIN, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Game Win)");
-        yml.addDefault(Messages.XP_REWARD_PER_TEAMMATE, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Team Support)");
-        yml.addDefault(Messages.XP_REWARD_BED_DESTROY, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Bed Destroyed)");
-        yml.addDefault(Messages.XP_REWARD_REGULAR_KILL, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Regular Kill)");
-        yml.addDefault(Messages.XP_REWARD_FINAL_KILL, "{prefix}&8+ &b{xp} Bed Wars Experience Received (Final Kill)");
+        yml.addDefault(Messages.XP_REWARD_PER_MINUTE, "{prefix}&b+{xp} Bed Wars Experience Received (Time Played)");
+        yml.addDefault(Messages.XP_REWARD_WIN, "{prefix}&b+{xp} Bed Wars Experience Received (Game Win)");
+        yml.addDefault(Messages.XP_REWARD_PER_TEAMMATE, "{prefix}&b+{xp} Bed Wars Experience Received (Team Support)");
+        yml.addDefault(Messages.XP_REWARD_BED_DESTROY, "{prefix}&b+{xp} Bed Wars Experience Received (Bed Destroyed)");
+        yml.addDefault(Messages.XP_REWARD_REGULAR_KILL, "{prefix}&b+{xp} Bed Wars Experience Received (Regular Kill)");
+        yml.addDefault(Messages.XP_REWARD_FINAL_KILL, "{prefix}&b+{xp} Bed Wars Experience Received (Final Kill)");
 
-        yml.addDefault(Messages.MONEY_REWARD_PER_MINUTE, "{prefix}&8+ &6{money} coins! (Time Played)");
-        yml.addDefault(Messages.MONEY_REWARD_WIN, "{prefix}&8+ &6{money} coins! (Game Win)");
-        yml.addDefault(Messages.MONEY_REWARD_PER_TEAMMATE, "{prefix}&8+ &6{money} coins! (Team Support)");
-        yml.addDefault(Messages.MONEY_REWARD_BED_DESTROYED, "{prefix}&8+ &6{money} coins! (Bed Destroyed)");
-        yml.addDefault(Messages.MONEY_REWARD_FINAL_KILL, "{prefix}&8+ &6{money} coins! (Final Kill)");
-        yml.addDefault(Messages.MONEY_REWARD_REGULAR_KILL, "{prefix}&8+ &6{money} coins! (Regular Kill)");
+        yml.addDefault(Messages.MONEY_REWARD_PER_MINUTE, "{prefix}&6+{money} coins! (Time Played)");
+        yml.addDefault(Messages.MONEY_REWARD_WIN, "{prefix}&6+{money} coins! (Game Win)");
+        yml.addDefault(Messages.MONEY_REWARD_PER_TEAMMATE, "{prefix}&6+{money} coins! (Team Support)");
+        yml.addDefault(Messages.MONEY_REWARD_BED_DESTROYED, "{prefix}&6+{money} coins! (Bed Destroyed)");
+        yml.addDefault(Messages.MONEY_REWARD_FINAL_KILL, "{prefix}&6+{money} coins! (Final Kill)");
+        yml.addDefault(Messages.MONEY_REWARD_REGULAR_KILL, "{prefix}&6+{money} coins! (Regular Kill)");
 
         /* Lobby Command Items */
         yml.addDefault(Messages.GENERAL_CONFIGURATION_LOBBY_ITEMS_NAME.replace("%path%", "stats"), "&bMy Statistics &7(Right Click)");
@@ -447,22 +452,22 @@ public class English extends Language {
                         "&7Tier 4: +200% Resources, &b16 Diamonds", ""));
         yml.addDefault(Messages.UPGRADES_UPGRADE_TIER_ITEM_NAME.replace("{name}", "forge").replace("{tier}", "tier-2"), "{color}Golden Forge");
         yml.addDefault(Messages.UPGRADES_UPGRADE_TIER_ITEM_LORE.replace("{name}", "forge").replace("{tier}", "tier-2"),
-                Arrays.asList("&7Upgrade resource spawning on", "&7your island.", "", "&aTier 1: +50% Resources, &b{cost} {currency}",
-                        "{tierColor}Tier 2: +100% Resources, &b8 Diamonds",
+                Arrays.asList("&7Upgrade resource spawning on", "&7your island.", "", "&aTier 1: +50% Resources, &b4 Diamonds",
+                        "{tierColor}Tier 2: +100% Resources, &b{cost} {currency}",
                         "&7Tier 3: Spawn emeralds, &b12 Diamonds",
                         "&7Tier 4: +200% Resources, &b16 Diamonds", ""));
         yml.addDefault(Messages.UPGRADES_UPGRADE_TIER_ITEM_NAME.replace("{name}", "forge").replace("{tier}", "tier-3"), "{color}Emerald Forge");
         yml.addDefault(Messages.UPGRADES_UPGRADE_TIER_ITEM_LORE.replace("{name}", "forge").replace("{tier}", "tier-3"),
-                Arrays.asList("&7Upgrade resource spawning on", "&7your island.", "", "&aTier 1: +50% Resources, &b{cost} {currency}",
+                Arrays.asList("&7Upgrade resource spawning on", "&7your island.", "", "&aTier 1: +50% Resources, &b4 Diamonds",
                         "&aTier 2: +100% Resources, &b8 Diamonds",
-                        "{tierColor}Tier 3: Spawn emeralds, &b12 Diamonds",
+                        "{tierColor}Tier 3: Spawn emeralds, &b{cost} {currency}",
                         "&7Tier 4: +200% Resources, &b16 Diamonds", ""));
         yml.addDefault(Messages.UPGRADES_UPGRADE_TIER_ITEM_NAME.replace("{name}", "forge").replace("{tier}", "tier-4"), "{color}Molten Forge");
         yml.addDefault(Messages.UPGRADES_UPGRADE_TIER_ITEM_LORE.replace("{name}", "forge").replace("{tier}", "tier-4"),
-                Arrays.asList("&7Upgrade resource spawning on", "&7your island.", "", "&aTier 1: +50% Resources, &b{cost} {currency}",
+                Arrays.asList("&7Upgrade resource spawning on", "&7your island.", "", "&aTier 1: +50% Resources, &b4 Diamonds",
                         "&aTier 2: +100% Resources, &b8 Diamonds",
                         "&aTier 3: Spawn emeralds, &b12 Diamonds",
-                        "{tierColor}Tier 4: +200% Resources, &b16 Diamonds", ""));
+                        "{tierColor}Tier 4: +200% Resources, &b{cost} {currency}", ""));
         yml.addDefault(Messages.UPGRADES_CATEGORY_ITEM_NAME_PATH + "traps", "&eBuy a trap");
         yml.addDefault(Messages.UPGRADES_CATEGORY_ITEM_LORE_PATH + "traps", Arrays.asList("&7Purchased traps will be", "&7queued on the right.", "", "&eClick to browse!"));
         yml.addDefault(Messages.UPGRADES_UPGRADE_TIER_ITEM_NAME.replace("{name}", "swords").replace("{tier}", "tier-1"), "{color}Sharpened Swords");
