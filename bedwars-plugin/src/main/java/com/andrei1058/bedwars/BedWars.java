@@ -241,9 +241,7 @@ public class BedWars extends JavaPlugin {
             if (!nms.isBukkitCommandRegistered("shout")) {
                 nms.registerCommand("shout", new ShoutCommand("shout"));
             }
-            if (!nms.isBukkitCommandRegistered("map")) {
-                nms.registerCommand("map", new MapCommand("map"));
-            }
+            nms.registerCommand("map", new MapCommand("map"));
             nms.registerCommand("rejoin", new RejoinCommand("rejoin"));
             if (!(nms.isBukkitCommandRegistered("leave") && getServerType() == ServerType.BUNGEE)) {
                 nms.registerCommand("leave", new LeaveCommand("leave"));

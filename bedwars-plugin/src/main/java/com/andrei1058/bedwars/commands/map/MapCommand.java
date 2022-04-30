@@ -37,12 +37,12 @@ public class MapCommand extends BukkitCommand {
     }
 
     @Override
-    public boolean execute(CommandSender s, String st, String[] args, String[] array) {
+    public boolean execute(CommandSender s, String st, String[] args) {
         if (s instanceof ConsoleCommandSender) {
-            commandSender.sendMessage("This command is for players!");
+            s.sendMessage("This command is for players!");
             return true;
         } else {
-            Player player = (Player)commandSender;
+            Player player = (Player)s;
             IArena arena = Arena.getArenaByPlayer(player);
             if (arena == null) {
                 return false;
