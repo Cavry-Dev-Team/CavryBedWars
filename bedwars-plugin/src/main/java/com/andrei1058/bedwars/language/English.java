@@ -284,14 +284,14 @@ public class English extends Language {
         yml.addDefault(Messages.NEXT_EVENT_SUBTITLE_ANNOUNCE_SUDDEN_DEATH, "");
         yml.addDefault(Messages.NEXT_EVENT_CHAT_ANNOUNCE_SUDDEN_DEATH, "&cSUDDEN DEATH: &6+&b{TeamDragons} {TeamColor}{TeamName} Dragon!");
         yml.addDefault(Messages.XP_REWARD_PER_MINUTE, "{prefix}&b+{xp} Bed Wars Experience Received (Time Played)");
-        yml.addDefault(Messages.XP_REWARD_WIN, "{prefix}&b+{xp} Bed Wars Experience Received (Game Win)");
+        yml.addDefault(Messages.XP_REWARD_WIN, "{prefix}&b+{xp} Bed Wars Experience Received (Win)");
         yml.addDefault(Messages.XP_REWARD_PER_TEAMMATE, "{prefix}&b+{xp} Bed Wars Experience Received (Team Support)");
         yml.addDefault(Messages.XP_REWARD_BED_DESTROY, "{prefix}&b+{xp} Bed Wars Experience Received (Bed Destroyed)");
         yml.addDefault(Messages.XP_REWARD_REGULAR_KILL, "{prefix}&b+{xp} Bed Wars Experience Received (Regular Kill)");
         yml.addDefault(Messages.XP_REWARD_FINAL_KILL, "{prefix}&b+{xp} Bed Wars Experience Received (Final Kill)");
 
         yml.addDefault(Messages.MONEY_REWARD_PER_MINUTE, "{prefix}&6+{money} coins! (Time Played)");
-        yml.addDefault(Messages.MONEY_REWARD_WIN, "{prefix}&6+{money} coins! (Game Win)");
+        yml.addDefault(Messages.MONEY_REWARD_WIN, "{prefix}&6+{money} coins! (Win)");
         yml.addDefault(Messages.MONEY_REWARD_PER_TEAMMATE, "{prefix}&6+{money} coins! (Team Support)");
         yml.addDefault(Messages.MONEY_REWARD_BED_DESTROYED, "{prefix}&6+{money} coins! (Bed Destroyed)");
         yml.addDefault(Messages.MONEY_REWARD_FINAL_KILL, "{prefix}&6+{money} coins! (Final Kill)");
@@ -533,7 +533,7 @@ public class English extends Language {
         yml.addDefault(Messages.UPGRADES_BASE_TRAP_ITEM_LORE_PATH + "3", Arrays.asList("&7Reveales invisible players as", "&7well as their name and team.", ""));
         yml.addDefault(Messages.UPGRADES_BASE_TRAP_ITEM_NAME_PATH + "4", "{color}Miner Fatigue Trap");
         yml.addDefault(Messages.UPGRADES_BASE_TRAP_ITEM_LORE_PATH + "4", Arrays.asList("&7Inflict Mining Fatigue for 10", "&7seconds.", ""));
-        yml.addDefault(Messages.UPGRADES_SEPARATOR_ITEM_NAME_PATH + "back", "&aBack");
+        yml.addDefault(Messages.UPGRADES_SEPARATOR_ITEM_NAME_PATH + "back", "&aGo Back");
         yml.addDefault(Messages.UPGRADES_SEPARATOR_ITEM_LORE_PATH + "back", Collections.singletonList("&7To Upgrades & Traps"));
         yml.addDefault(Messages.UPGRADES_CATEGORY_GUI_NAME_PATH + "traps", "&8Queue a trap");
         yml.addDefault(Messages.UPGRADES_TRAP_QUEUE_LIMIT, "&cTrap queue full!");
