@@ -8,6 +8,8 @@ import com.andrei1058.bedwars.configuration.MoneyConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitTask;
+import net.minecraft.server.v1_8_R3.ChatComponentText;
+import net.minecraft.server.v1_8_R3.PacketPlayOutChat;
 
 public class MoneyPerMinuteTask {
 
@@ -26,6 +28,7 @@ public class MoneyPerMinuteTask {
             for (Player p : arena.getPlayers()) {
                     BedWars.getEconomy ().giveMoney ( p, money );
                     p.sendMessage ( Language.getMsg ( p, Messages.MONEY_REWARD_PER_MINUTE ).replace ( "{money}", String.valueOf ( money ) ) );
+                    sendActionBar(player, ChatColor.GOLD + "+" + money + " coins!");
             }
         }, 60 * 20, 60 * 20);
     }
@@ -37,5 +40,10 @@ public class MoneyPerMinuteTask {
         if (task != null) {
             task.cancel();
         }
+    }
+
+    public void sendActionBar(Player player, String message){
+        PacketPlayOutChat packet = new PacketPlayOutChat(new ChatComponentText(message), (byte)2);
+        ((CraftPlayer) player).getHandle().playerConnection.sendPacket(packet);
     }
 }

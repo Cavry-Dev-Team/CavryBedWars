@@ -45,7 +45,7 @@ public class FunniListener implements Listener {
         for (UUID p : e.getWinners ()) {
             Player player = Bukkit.getPlayer ( p );
             if (player == null) return;
-            player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 240, 1));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 240, 255));
         }
     }
 

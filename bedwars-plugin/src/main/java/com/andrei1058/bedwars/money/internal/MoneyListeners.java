@@ -56,7 +56,10 @@ public class MoneyListeners implements Listener {
         int beddestroy = MoneyConfig.money.getInt ( "money-rewards.bed-destroyed" );
         if (beddestroy > 0) {
             BedWars.getEconomy ().giveMoney ( player, beddestroy );
-            player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_BED_DESTROYED ).replace ( "{money}", String.valueOf ( beddestroy ) ) );
+            Bukkit.getScheduler().runTaskLater(BedWars.plugin, () -> {
+                    player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_BED_DESTROYED ).replace ( "{money}", String.valueOf ( beddestroy ) ) );
+                    sendActionBar(player, ChatColor.GOLD + "+" + beddestroy + " coins!");
+            }, 5L);
         }
     }
 
@@ -76,7 +79,7 @@ public class MoneyListeners implements Listener {
                 Bukkit.getScheduler().runTaskLater(BedWars.plugin, () -> {
                     player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_FINAL_KILL ).replace ( "{money}", String.valueOf ( finalKill ) ) );
                     sendActionBar(player, ChatColor.GOLD + "+" + finalKill + " coins!");
-                }, 8L);
+                }, 5L);
             }
         } else {
             if (regularKill > 0) {
@@ -84,7 +87,7 @@ public class MoneyListeners implements Listener {
                 Bukkit.getScheduler().runTaskLater(BedWars.plugin, () -> {
                     player.sendMessage ( Language.getMsg ( player, Messages.MONEY_REWARD_REGULAR_KILL ).replace ( "{money}", String.valueOf ( regularKill ) ) );
                     sendActionBar(player, ChatColor.GOLD + "+" + regularKill + " coins!");
-                }, 8L);
+                }, 5L);
             }
         }
     }
