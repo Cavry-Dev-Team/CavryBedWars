@@ -18,7 +18,7 @@
         </repository>
         <repository>
             <id>commons-repo</id>
-            <url>https://repo.fusesource.com/nexus/content/repositories/releases-3rd-party/</url>
+            <url>https://dist.wso2.org/maven2/</url>
         </repository>
     </repositories>
 
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>com.google.common</groupId>
             <artifactId>google-collect</artifactId>
-            <version>1.0</version>
+            <version>1.0-rc1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
