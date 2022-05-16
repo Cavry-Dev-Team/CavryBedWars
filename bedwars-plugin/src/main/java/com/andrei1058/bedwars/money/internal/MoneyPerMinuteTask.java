@@ -30,7 +30,7 @@ public class MoneyPerMinuteTask {
             for (Player p : arena.getPlayers()) {
                     BedWars.getEconomy ().giveMoney ( p, money );
                     p.sendMessage ( Language.getMsg ( p, Messages.MONEY_REWARD_PER_MINUTE ).replace ( "{money}", String.valueOf ( money ) ) );
-                    sendActionBar(player, ChatColor.GOLD + "+" + money + " coins!");
+                    sendActionBar(p, ChatColor.GOLD + "+" + money + " coins!");
             }
         }, 60 * 20, 60 * 20);
     }
