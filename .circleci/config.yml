@@ -23,7 +23,7 @@ jobs:
           name: Build
           command: mvn clean install --file pom.xml -s ci_settings.xml
       - store_artifacts:
-          path: bedwars-plugin/target/*.jar
+          path: bedwars-plugin/target/
       # Then run your tests!
 
 # Invoke jobs via workflows
