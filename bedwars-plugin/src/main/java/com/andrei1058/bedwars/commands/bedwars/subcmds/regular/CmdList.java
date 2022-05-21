@@ -180,11 +180,10 @@ public class CmdList extends SubCommand {
             s.sendMessage("");
             s.sendMessage("§8|- " + "§bCavry Bed Wars v1.0 ");
             s.sendMessage("§8|- " + "§7§oPlugin by andrei1058 modified for Cavry Network");
-            s.sendMessage("");
             for (String string : getList((Player) s, Messages.COMMAND_MAIN)) {
                 s.sendMessage(string);
-                s.sendMessage("");
             }
+            s.sendMessage("");
         }
         return true;
     }
